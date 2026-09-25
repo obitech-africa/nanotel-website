@@ -347,10 +347,10 @@ export default function Home() {
               </NavLink>
 
               <NavLink
-                to="/partnerships"
+                to="/contact?department=partners"
                 className="rounded-xl border border-white/30 px-6 py-3 font-bold text-white transition hover:bg-white/10"
               >
-                Partnerships
+                Partner with Us
               </NavLink>
             </div>
           </div>
