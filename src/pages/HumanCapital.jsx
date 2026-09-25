@@ -131,7 +131,7 @@ export default function HumanCapital() {
       <section className="bg-slate-900 py-14 text-white">
         <div className="mx-auto max-w-6xl px-4">
           <div className="max-w-3xl">
-            <div className="text-sm font-bold uppercase tracking-wider text-blue-800">
+            <div className="text-sm font-bold uppercase tracking-wider text-emerald-300">
               Six Development Pillars
             </div>
 
@@ -200,7 +200,7 @@ export default function HumanCapital() {
       <section className="bg-slate-100 py-14 text-slate-900">
         <div className="mx-auto max-w-6xl px-4">
           <div className="max-w-3xl">
-            <div className="text-sm font-bold uppercase tracking-wider text-emerald-300">
+            <div className="text-sm font-bold uppercase tracking-wider text-blue-800">
               Learning & Career Pathway
             </div>
 
