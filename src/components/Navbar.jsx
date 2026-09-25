@@ -11,8 +11,6 @@ export default function Navbar() {
       { to: "/overview", label: "Overview" },
       { to: "/about", label: "About" },
       { to: "/services", label: "Business Lines" },
-      { to: "/partnerships", label: "Partnerships" },
-      { to: "/investors", label: "Investors" },
       { to: "/human-capital", label: "Human Capital" },
       { to: "/ethics", label: "Ethics" },
     ],
