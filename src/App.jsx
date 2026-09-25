@@ -1,7 +1,7 @@
 // src/App.jsx
 // src/App.jsx
 import React from "react";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
@@ -10,8 +10,6 @@ import HumanCapital from "./pages/HumanCapital.jsx";
 import Ethics from "./pages/Ethics.jsx";
 import Contact from "./pages/Contact.jsx";
 import Overview from "./pages/Overview.jsx";
-import Investors from "./pages/Investors.jsx";
-import Partnerships from "./pages/Partnerships.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import AdminLogin from "./pages/AdminLogin.jsx";
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
@@ -35,8 +33,8 @@ export default function App() {
             <Route path="/overview" element={<Overview />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
-            <Route path="/partnerships" element={<Partnerships />} />
-            <Route path="/investors" element={<Investors />} />
+            <Route path="/partnerships" element={<Navigate to="/contact?department=partners" replace />} />
+            <Route path="/investors" element={<Navigate to="/contact?department=partners" replace />} />
             <Route path="/human-capital" element={<HumanCapital />} />
             <Route path="/ethics" element={<Ethics />} />
             <Route path="/admin/login" element={<AdminLogin />} />

@@ -147,10 +147,10 @@ export default function Services() {
               Request a Proposal
             </NavLink>
             <NavLink
-              to="/partnerships"
+              to="/contact?department=partners"
               className="px-5 py-3 rounded-2xl bg-white/10 text-white font-bold border border-white/15 hover:bg-white/15 transition"
             >
-              Partnerships
+              Partner with Us
             </NavLink>
           </div>
         </div>
@@ -211,10 +211,10 @@ export default function Services() {
               Contact
             </NavLink>
             <NavLink
-              to="/investors"
+              to="/contact?department=partners"
               className="px-5 py-3 rounded-2xl bg-white/10 text-white font-bold border border-white/15 hover:bg-white/15 transition"
             >
-              Investors
+              Partner & Investment Inquiries
             </NavLink>
           </div>
         </div>

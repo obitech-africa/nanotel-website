@@ -40,8 +40,6 @@ export default function Footer() {
             <NavLink to="/overview" className="text-white/80 hover:text-white hover:underline">Company Overview</NavLink>
             <NavLink to="/about" className="text-white/80 hover:text-white hover:underline">About Nanotel</NavLink>
             <NavLink to="/services" className="text-white/80 hover:text-white hover:underline">Business Lines</NavLink>
-            <NavLink to="/partnerships" className="text-white/80 hover:text-white hover:underline">Partnerships</NavLink>
-            <NavLink to="/investors" className="text-white/80 hover:text-white hover:underline">Investors</NavLink>
             <NavLink to="/contact" className="text-white/80 hover:text-white hover:underline">Contact</NavLink>
           </div>
         </div>
@@ -59,16 +57,9 @@ export default function Footer() {
             </p>
 
             <p>
-              <span className="text-white/60">Partnerships:</span>{" "}
+              <span className="text-white/60">Partners:</span>{" "}
               <a href="mailto:partnerships@nanotel.net" className="hover:underline">
                 partnerships@nanotel.net
-              </a>
-            </p>
-
-            <p>
-              <span className="text-white/60">Investors:</span>{" "}
-              <a href="mailto:investors@nanotel.net" className="hover:underline">
-                investors@nanotel.net
               </a>
             </p>
           </div>

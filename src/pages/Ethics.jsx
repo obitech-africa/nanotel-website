@@ -129,7 +129,7 @@ export default function Ethics() {
                   </a>
                 </div>
                 <div className="text-slate-700">
-                  <span className="text-slate-500">Partnerships:</span>{" "}
+                  <span className="text-slate-500">Partners:</span>{" "}
                   <a className="font-semibold text-blue-800 hover:underline" href="mailto:partnerships@nanotel.net">
                     partnerships@nanotel.net
                   </a>
@@ -166,7 +166,7 @@ export default function Ethics() {
               href="mailto:partnerships@nanotel.net?subject=Compliance%20Alignment%20Request"
               className="px-5 py-3 rounded-2xl bg-white/10 text-white font-bold border border-white/20 hover:bg-white/15 transition"
             >
-              Partner Compliance
+              Partners Contact
             </a>
           </div>
         </div>
