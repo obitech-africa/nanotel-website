@@ -105,8 +105,9 @@ export default function HumanCapital() {
       </section>
 
       {/* MISSION */}
-      <section className="mx-auto max-w-6xl px-4 py-14">
-        <div className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm md:p-10">
+      <section className="bg-slate-100 py-14">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-slate-100 via-blue-50 to-emerald-50 p-7 shadow-sm md:p-10">
           <div className="text-sm font-bold uppercase tracking-wider text-emerald-700">
             Our Human Capital Mission
           </div>
@@ -122,18 +123,19 @@ export default function HumanCapital() {
             assembly, manufacturing, and R&amp;D activities, we aim to develop the
             people needed to support that growth sustainably.
           </p>
+          </div>
         </div>
       </section>
 
       {/* PILLARS */}
-      <section className="bg-white py-14">
+      <section className="bg-slate-900 py-14 text-white">
         <div className="mx-auto max-w-6xl px-4">
           <div className="max-w-3xl">
             <div className="text-sm font-bold uppercase tracking-wider text-blue-800">
               Six Development Pillars
             </div>
 
-            <h2 className="mt-2 text-3xl font-extrabold text-slate-900">
+            <h2 className="mt-2 text-3xl font-extrabold text-white">
               How we build technical and leadership capacity
             </h2>
           </div>
@@ -142,17 +144,17 @@ export default function HumanCapital() {
             {PILLARS.map((item, index) => (
               <div
                 key={item.title}
-                className="rounded-3xl border border-slate-200 bg-slate-50 p-6"
+                className="group rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg transition hover:-translate-y-1 hover:border-emerald-400/60 hover:bg-white/10"
               >
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-900 text-sm font-extrabold text-white">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-emerald-400/40 bg-emerald-400/10 text-sm font-extrabold text-emerald-300">
                   {String(index + 1).padStart(2, "0")}
                 </div>
 
-                <h3 className="mt-5 text-xl font-extrabold text-slate-900">
+                <h3 className="mt-5 text-xl font-extrabold text-white">
                   {item.title}
                 </h3>
 
-                <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                <p className="mt-2 text-sm leading-relaxed text-white/70">
                   {item.text}
                 </p>
               </div>
@@ -162,18 +164,18 @@ export default function HumanCapital() {
       </section>
 
       {/* SKILLS */}
-      <section className="mx-auto max-w-6xl px-4 py-14">
-        <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+      <section className="bg-gradient-to-r from-blue-950 via-slate-950 to-emerald-950 py-14 text-white">
+        <div className="mx-auto grid max-w-6xl gap-8 px-4 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
           <div>
-            <div className="text-sm font-bold uppercase tracking-wider text-emerald-700">
+            <div className="text-sm font-bold uppercase tracking-wider text-emerald-300">
               Technical Skills
             </div>
 
-            <h2 className="mt-2 text-3xl font-extrabold text-slate-900">
+            <h2 className="mt-2 text-3xl font-extrabold text-white">
               Capability aligned to Nanotel&apos;s real work
             </h2>
 
-            <p className="mt-4 leading-relaxed text-slate-600">
+            <p className="mt-4 leading-relaxed text-white/70">
               Our talent development priorities are connected to the systems,
               infrastructure, and technologies we work with today and plan to expand
               into over time.
@@ -184,10 +186,10 @@ export default function HumanCapital() {
             {SKILLS.map((skill) => (
               <div
                 key={skill}
-                className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-sm"
+                className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/10 px-5 py-4 shadow-sm"
               >
                 <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-emerald-500" />
-                <span className="font-semibold text-slate-800">{skill}</span>
+                <span className="font-semibold text-white">{skill}</span>
               </div>
             ))}
           </div>
@@ -195,25 +197,49 @@ export default function HumanCapital() {
       </section>
 
       {/* CAREER PATH */}
-      <section className="bg-slate-950 py-14 text-white">
+      <section className="bg-slate-100 py-14 text-slate-900">
         <div className="mx-auto max-w-6xl px-4">
           <div className="max-w-3xl">
             <div className="text-sm font-bold uppercase tracking-wider text-emerald-300">
               Learning & Career Pathway
             </div>
 
-            <h2 className="mt-2 text-3xl font-extrabold">
+            <h2 className="mt-2 text-3xl font-extrabold text-slate-900">
               A pathway from entry-level talent to technical leadership
             </h2>
 
-            <p className="mt-3 leading-relaxed text-white/70">
+            <p className="mt-3 leading-relaxed text-slate-600">
               This pathway reflects Nanotel Africa&apos;s intended talent-development
               model as the company grows. Specific opportunities will depend on
               business needs, active projects, and available programs.
             </p>
           </div>
 
-          <div className="mt-8 grid gap-4 md:grid-cols-5">
+          <div className="mt-10 hidden md:block">
+            <div className="relative">
+              <div className="absolute left-[10%] right-[10%] top-5 h-0.5 bg-gradient-to-r from-blue-700 via-emerald-500 to-blue-700" />
+              <div className="relative grid grid-cols-5 gap-4">
+                {[
+                  "Graduate / Trainee",
+                  "Field Engineer / Technician",
+                  "Technical Specialist",
+                  "Project Lead",
+                  "Technical / Operations Leadership",
+                ].map((stage, index) => (
+                  <div key={stage} className="text-center">
+                    <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-full border-4 border-slate-100 bg-slate-950 text-xs font-extrabold text-white shadow">
+                      {index + 1}
+                    </div>
+                    <div className="mt-4 rounded-2xl border border-slate-200 bg-white p-4 font-extrabold text-slate-900 shadow-sm">
+                      {stage}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8 grid gap-3 md:hidden">
             {[
               "Graduate / Trainee",
               "Field Engineer / Technician",
@@ -221,15 +247,11 @@ export default function HumanCapital() {
               "Project Lead",
               "Technical / Operations Leadership",
             ].map((stage, index) => (
-              <div
-                key={stage}
-                className="relative rounded-2xl border border-white/15 bg-white/10 p-5"
-              >
-                <div className="text-xs font-bold uppercase tracking-wider text-emerald-300">
-                  Stage {index + 1}
+              <div key={stage} className="flex items-center gap-4 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-slate-950 text-sm font-extrabold text-white">
+                  {index + 1}
                 </div>
-
-                <div className="mt-2 font-extrabold text-white">{stage}</div>
+                <div className="font-extrabold text-slate-900">{stage}</div>
               </div>
             ))}
           </div>
@@ -295,7 +317,8 @@ export default function HumanCapital() {
       </section>
 
       {/* EDUCATION / PARTNERS */}
-      <section className="mx-auto max-w-6xl px-4 py-14">
+      <section className="bg-slate-100 py-14">
+        <div className="mx-auto max-w-6xl px-4">
         <div className="max-w-3xl">
           <div className="text-sm font-bold uppercase tracking-wider text-emerald-700">
             Future Skills Partnerships
@@ -327,6 +350,7 @@ export default function HumanCapital() {
               </p>
             </div>
           ))}
+        </div>
         </div>
       </section>
 
