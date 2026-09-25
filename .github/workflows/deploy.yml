@@ -50,6 +50,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Wait for legacy Pages publisher
+        run: sleep 90
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
