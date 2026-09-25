@@ -29,10 +29,30 @@ export default function Ethics() {
   ];
 
   const commitments = [
-    { title: "Respect & Professional Conduct", desc: "We promote respectful collaboration across teams and partners." },
-    { title: "Data Responsibility", desc: "We apply access control and security discipline to protect sensitive information." },
-    { title: "Fair Partnerships", desc: "We engage partners based on performance, compliance, and mutual value." },
-    { title: "Sustainability Mindset", desc: "We support energy-aware design and efficient field operations." },
+    {
+      title: "Anti-Bribery & Fair Dealing",
+      desc: "We do not support bribery, kickbacks, improper payments, or unfair influence in procurement, contracting, or project execution.",
+    },
+    {
+      title: "Respect & Professional Conduct",
+      desc: "We promote respectful, professional, and non-discriminatory collaboration across teams, clients, partners, suppliers, and communities.",
+    },
+    {
+      title: "Data Responsibility",
+      desc: "We apply appropriate access control, confidentiality, and security discipline to protect operational, commercial, customer, and partner information.",
+    },
+    {
+      title: "Fair Partnerships & Procurement",
+      desc: "We engage suppliers, OEMs, contractors, financiers, and strategic partners based on transparency, capability, compliance, performance, and mutual value.",
+    },
+    {
+      title: "Conflicts of Interest",
+      desc: "Potential conflicts should be disclosed so business decisions can be made transparently and in the best interests of Nanotel Africa and its stakeholders.",
+    },
+    {
+      title: "Sustainability & Community Responsibility",
+      desc: "We support energy-aware infrastructure, responsible field practices, and long-term value for the communities and markets where we operate.",
+    },
   ];
 
   return (
@@ -53,8 +73,8 @@ export default function Ethics() {
           </h1>
 
           <p className="mt-4 text-white/80 max-w-3xl text-base md:text-lg leading-relaxed">
-            Nanotel operates with integrity, compliance-first discipline, and professional delivery standards—
-            supporting safe, secure, and reliable infrastructure execution across Africa.
+            Nanotel Africa operates with integrity, compliance-first discipline, fair business practices,
+            and professional delivery standards—supporting safe, secure, and reliable infrastructure execution across Africa.
           </p>
         </div>
       </section>
@@ -102,23 +122,34 @@ export default function Ethics() {
             <div className="max-w-2xl">
               <h2 className="text-2xl font-extrabold text-slate-900">Our commitments</h2>
               <p className="mt-3 text-slate-700 leading-relaxed">
-                We aim to build trust through consistent behavior, strong governance, and responsible delivery.
+                We aim to build trust through consistent behavior, strong governance, responsible delivery, and clear accountability across our business relationships.
               </p>
 
               <div className="mt-6 grid gap-4 sm:grid-cols-2">
                 {commitments.map((c) => (
                   <div key={c.title} className="rounded-2xl bg-slate-50 border border-slate-200 p-5">
                     <div className="font-extrabold text-slate-900">{c.title}</div>
-                    <div className="mt-1 text-sm text-slate-700">{c.desc}</div>
+                    <div className="mt-1 text-sm text-slate-700 leading-relaxed">{c.desc}</div>
                   </div>
                 ))}
+              </div>
+
+              <div className="mt-6 rounded-2xl border border-emerald-200 bg-emerald-50 p-5">
+                <div className="font-extrabold text-emerald-900">
+                  Raising concerns in good faith
+                </div>
+                <p className="mt-2 text-sm leading-relaxed text-emerald-800">
+                  Ethics, safety, compliance, fraud, bribery, data handling, or professional conduct concerns
+                  should be raised promptly and reviewed responsibly. Good-faith concerns should be handled
+                  with appropriate confidentiality and without retaliation.
+                </p>
               </div>
             </div>
 
             <div className="rounded-3xl bg-slate-50 border border-slate-200 p-6 w-full md:w-[360px]">
               <div className="text-sm font-extrabold text-slate-900">Ethics contact</div>
               <p className="mt-2 text-sm text-slate-700">
-                For governance inquiries, compliance alignment, and professional conduct matters:
+                For governance inquiries, compliance alignment, professional conduct matters, or good-faith ethics concerns:
               </p>
 
               <div className="mt-4 space-y-2 text-sm">
@@ -152,7 +183,7 @@ export default function Ethics() {
         <div className="mt-14 rounded-3xl bg-gradient-to-r from-slate-950 via-blue-950 to-emerald-950 text-white p-8 md:p-10 shadow-xl">
           <div className="text-sm text-white/70 font-semibold">Quality & Trust</div>
           <div className="mt-2 text-2xl md:text-3xl font-extrabold">
-            We deliver with discipline—safely, compliantly, and transparently.
+            We deliver with discipline—safely, fairly, compliantly, and transparently.
           </div>
 
           <div className="mt-6 flex flex-wrap gap-3">
