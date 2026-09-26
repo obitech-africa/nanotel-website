@@ -68,10 +68,9 @@ const FEATURED_LINES = [
       "Testing, documentation, commissioning, and support",
     ],
     images: [
-      { src: asset("data-centre-infrastructure.jpg"), alt: "Modern data centre server infrastructure" },
+      { src: asset("datacenter-3.jpg"), alt: "Data centre technical environment" },
       { src: asset("datacenter-1.jpg"), alt: "Data centre installation environment" },
       { src: asset("datacenter-2.jpg"), alt: "Data centre racks and infrastructure" },
-      { src: asset("datacenter-3.jpg"), alt: "Data centre technical environment" },
       { src: asset("gallery-5.jpg"), alt: "Data centre infrastructure project" },
     ],
   },
