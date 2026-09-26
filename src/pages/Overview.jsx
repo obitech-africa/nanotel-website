@@ -1,28 +1,24 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const MISSION = [
-  "Deliver reliable telecommunications and digital infrastructure solutions across African markets.",
-  "Support operators, enterprises, institutions, and public-sector projects with quality engineering and technical services.",
-  "Provide practical infrastructure solutions for connectivity, energy, ICT, and digital operations.",
-  "Promote innovation, operational excellence, and sustainable technology development.",
-  "Build long-term partnerships that create value for customers, communities, and stakeholders.",
-];
-
 const CAPABILITIES = [
   {
-    title: "Telecommunications",
-    text: "Network infrastructure, fiber, towers, radio sites, field deployment, modernization, and operations support.",
+    number: "01",
+    title: "Telecommunications Infrastructure",
+    text: "Network deployment, fiber, radio sites, tower support, modernization, and field operations.",
   },
   {
+    number: "02",
     title: "Energy Infrastructure",
-    text: "Solar, hybrid power, batteries, backup systems, and resilient power solutions for telecom and ICT environments.",
+    text: "Solar, hybrid power, battery systems, backup power, and resilient energy solutions for critical sites.",
   },
   {
+    number: "03",
     title: "ICT & Digital Infrastructure",
-    text: "Enterprise networks, cloud integration, structured cabling, digital platforms, and technical systems support.",
+    text: "Enterprise networks, structured cabling, cloud integration, digital systems, and technical support.",
   },
   {
+    number: "04",
     title: "Data Centres & Equipment",
     text: "Data centre infrastructure, carrier equipment, OEM coordination, installation, commissioning, and lifecycle support.",
   },
@@ -41,235 +37,269 @@ const VALUES = [
   "Engineering Excellence",
   "Reliable Delivery",
   "Integrity & Transparency",
-  "Innovation & Continuous Improvement",
+  "Innovation",
   "Pan-African Collaboration",
-  "Sustainability & Inclusion",
+  "Sustainability",
 ];
 
 export default function Overview() {
   return (
-    <div className="min-h-screen bg-slate-50">
-      <section className="relative overflow-hidden">
+    <div className="min-h-screen bg-white">
+      {/* HERO */}
+      <section className="relative overflow-hidden bg-slate-950 text-white">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950 to-emerald-950" />
-        <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.14),transparent_40%),radial-gradient(circle_at_70%_30%,rgba(34,197,94,0.14),transparent_42%),radial-gradient(circle_at_40%_80%,rgba(59,130,246,0.14),transparent_45%)]" />
+        <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_18%_20%,rgba(255,255,255,0.15),transparent_34%),radial-gradient(circle_at_85%_30%,rgba(16,185,129,0.18),transparent_34%)]" />
 
-        <div className="relative max-w-6xl mx-auto px-4 py-16 text-white">
-          <div className="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/10 px-4 py-2 text-white/80 text-sm">
-            <span className="h-2 w-2 rounded-full bg-emerald-400" />
-            Corporate Overview • Africa • Digital Infrastructure
-          </div>
+        <div className="relative mx-auto max-w-6xl px-4 py-20 md:py-24">
+          <div className="max-w-4xl">
+            <div className="text-sm font-bold uppercase tracking-[0.18em] text-emerald-300">
+              Company Overview
+            </div>
 
-          <h1 className="mt-5 text-4xl md:text-5xl font-extrabold tracking-tight">
-            Nanotel Africa
-          </h1>
+            <h1 className="mt-5 text-4xl font-extrabold tracking-tight md:text-6xl">
+              Building dependable infrastructure for Africa&apos;s connected future.
+            </h1>
 
-          <p className="mt-5 max-w-3xl text-white/80 text-lg leading-relaxed">
-            Nanotel Africa is a telecommunications and technology infrastructure
-            company supporting connectivity, digital transformation, and resilient
-            infrastructure development across African markets.
-          </p>
+            <p className="mt-6 max-w-3xl text-lg leading-relaxed text-white/78 md:text-xl">
+              Nanotel Africa is a telecommunications and technology infrastructure
+              company delivering practical solutions across connectivity, energy,
+              ICT, data centres, and digital infrastructure.
+            </p>
 
-          <div className="mt-8 flex flex-wrap gap-3">
-            <NavLink
-              to="/services"
-              className="px-6 py-3 rounded-2xl bg-white text-slate-950 font-extrabold hover:bg-white/90 transition"
-            >
-              Explore Business Lines
-            </NavLink>
+            <div className="mt-9 flex flex-wrap gap-3">
+              <NavLink
+                to="/services"
+                className="rounded-xl bg-white px-6 py-3 font-extrabold text-slate-950 transition hover:bg-white/90"
+              >
+                Explore Business Lines
+              </NavLink>
 
-            <NavLink
-              to="/contact"
-              className="px-6 py-3 rounded-2xl bg-white/10 text-white font-bold border border-white/15 hover:bg-white/15 transition"
-            >
-              Contact Nanotel
-            </NavLink>
+              <NavLink
+                to="/contact"
+                className="rounded-xl border border-white/20 bg-white/10 px-6 py-3 font-bold text-white transition hover:bg-white/15"
+              >
+                Contact Nanotel
+              </NavLink>
+            </div>
           </div>
         </div>
       </section>
 
-      <main className="max-w-6xl mx-auto px-4 py-14 space-y-14">
-        <section className="grid gap-6 lg:grid-cols-3">
-          <div className="lg:col-span-2 rounded-3xl border border-slate-200 bg-white p-7 md:p-9 shadow-sm">
-            <div className="text-sm font-bold uppercase tracking-wide text-emerald-700">
-              Company Snapshot
+      <main>
+        {/* COMPANY PROFILE */}
+        <section className="border-b border-slate-200 bg-slate-50">
+          <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 lg:grid-cols-[1.5fr_0.8fr] lg:items-start">
+            <div>
+              <div className="text-sm font-bold uppercase tracking-[0.16em] text-blue-700">
+                Who We Are
+              </div>
+
+              <h2 className="mt-3 max-w-3xl text-3xl font-extrabold tracking-tight text-slate-950 md:text-4xl">
+                An African infrastructure company focused on reliable execution.
+              </h2>
+
+              <p className="mt-6 max-w-3xl text-lg leading-relaxed text-slate-700">
+                We support telecom operators, internet service providers, tower
+                companies, enterprises, institutions, development organizations,
+                and public-sector projects that require dependable infrastructure,
+                technical delivery, and long-term operational support.
+              </p>
+
+              <p className="mt-4 max-w-3xl leading-relaxed text-slate-600">
+                Our approach combines engineering discipline, local market
+                understanding, responsible partnerships, and practical execution
+                across diverse operating environments.
+              </p>
             </div>
 
-            <h2 className="mt-3 text-2xl md:text-3xl font-extrabold text-slate-900">
-              Infrastructure capability built for real operating environments
-            </h2>
+            <aside className="border-l-4 border-emerald-500 bg-white p-6 shadow-sm">
+              <div className="text-sm font-bold uppercase tracking-[0.14em] text-slate-500">
+                At a Glance
+              </div>
 
-            <p className="mt-5 text-slate-700 leading-relaxed">
-              We work with telecom operators, internet service providers, tower
-              companies, enterprises, institutions, development organizations, and
-              public-sector projects that require dependable infrastructure delivery,
-              technical support, and long-term operational reliability.
-            </p>
-
-            <p className="mt-4 text-slate-700 leading-relaxed">
-              Our approach combines engineering discipline, local market knowledge,
-              practical execution, responsible partnerships, and a long-term
-              Pan-African growth perspective.
-            </p>
-          </div>
-
-          <div className="rounded-3xl bg-slate-900 text-white p-7 md:p-9 shadow-sm">
-            <div className="text-sm font-bold uppercase tracking-wide text-emerald-300">
-              Our Vision
-            </div>
-
-            <h2 className="mt-3 text-2xl font-extrabold">
-              Trusted infrastructure partner for Africa’s digital growth
-            </h2>
-
-            <p className="mt-4 text-white/75 leading-relaxed">
-              To support reliable connectivity, technology adoption, sustainable
-              infrastructure, and long-term digital development across Africa.
-            </p>
+              <dl className="mt-5 divide-y divide-slate-200">
+                <ProfileRow label="Focus" value="Telecom & digital infrastructure" />
+                <ProfileRow label="Market" value="African markets" />
+                <ProfileRow label="Clients" value="Operators, enterprises & institutions" />
+                <ProfileRow label="Model" value="Engineering, deployment & support" />
+              </dl>
+            </aside>
           </div>
         </section>
 
-        <section>
+        {/* CAPABILITIES */}
+        <section className="mx-auto max-w-6xl px-4 py-18 md:py-20">
           <div className="max-w-3xl">
-            <div className="text-sm font-bold uppercase tracking-wide text-blue-700">
-              Capabilities
+            <div className="text-sm font-bold uppercase tracking-[0.16em] text-emerald-700">
+              Core Capabilities
             </div>
-            <h2 className="mt-2 text-3xl font-extrabold text-slate-900">
-              What Nanotel Africa supports
+
+            <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-slate-950 md:text-4xl">
+              Infrastructure capability across four core areas.
             </h2>
-            <p className="mt-3 text-slate-600 leading-relaxed">
-              This overview stays intentionally high-level. Detailed delivery scope,
-              technical services, and project visuals are presented under Business Lines.
+
+            <p className="mt-4 text-slate-600">
+              Detailed scope, project environments, and service delivery are presented
+              under Business Lines.
             </p>
           </div>
 
-          <div className="mt-8 grid gap-5 md:grid-cols-2">
+          <div className="mt-10 grid gap-x-10 gap-y-0 border-t border-slate-200 md:grid-cols-2">
             {CAPABILITIES.map((item) => (
               <div
                 key={item.title}
-                className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm"
+                className="grid grid-cols-[52px_1fr] gap-4 border-b border-slate-200 py-7"
               >
-                <div className="flex gap-4">
-                  <span className="mt-2 h-2.5 w-2.5 rounded-full bg-emerald-500 shrink-0" />
-                  <div>
-                    <h3 className="text-xl font-extrabold text-slate-900">
-                      {item.title}
-                    </h3>
-                    <p className="mt-2 text-slate-600 leading-relaxed">
-                      {item.text}
-                    </p>
-                  </div>
+                <div className="text-sm font-extrabold text-emerald-700">
+                  {item.number}
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-extrabold text-slate-950">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 leading-relaxed text-slate-600">
+                    {item.text}
+                  </p>
                 </div>
               </div>
             ))}
           </div>
         </section>
 
-        <section className="grid gap-6 lg:grid-cols-2">
-          <div className="rounded-3xl border border-slate-200 bg-white p-7 md:p-9 shadow-sm">
-            <div className="text-sm font-bold uppercase tracking-wide text-blue-700">
-              Our Mission
+        {/* VISION + MISSION */}
+        <section className="bg-slate-950 text-white">
+          <div className="mx-auto grid max-w-6xl gap-12 px-4 py-16 md:grid-cols-2 md:py-20">
+            <div>
+              <div className="text-sm font-bold uppercase tracking-[0.16em] text-emerald-300">
+                Vision
+              </div>
+
+              <h2 className="mt-3 text-3xl font-extrabold tracking-tight">
+                A trusted infrastructure partner for Africa&apos;s digital growth.
+              </h2>
+
+              <p className="mt-5 max-w-xl leading-relaxed text-white/70">
+                To support reliable connectivity, technology adoption, sustainable
+                infrastructure, and long-term digital development across Africa.
+              </p>
             </div>
 
-            <ul className="mt-5 grid gap-4 text-slate-700">
-              {MISSION.map((item) => (
-                <li key={item} className="flex gap-3">
-                  <span className="mt-2 h-2 w-2 rounded-full bg-blue-600 shrink-0" />
-                  <span className="leading-relaxed">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+            <div>
+              <div className="text-sm font-bold uppercase tracking-[0.16em] text-blue-300">
+                Mission
+              </div>
 
-          <div className="rounded-3xl border border-slate-200 bg-white p-7 md:p-9 shadow-sm">
-            <div className="text-sm font-bold uppercase tracking-wide text-emerald-700">
-              Corporate Values
-            </div>
-
-            <div className="mt-5 grid gap-3 sm:grid-cols-2">
-              {VALUES.map((value) => (
-                <div
-                  key={value}
-                  className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4 font-semibold text-slate-800"
-                >
-                  {value}
-                </div>
-              ))}
+              <div className="mt-5 space-y-5">
+                <MissionItem>
+                  Deliver dependable telecommunications, ICT, energy, and digital
+                  infrastructure solutions.
+                </MissionItem>
+                <MissionItem>
+                  Support customers with quality engineering, technical services,
+                  and disciplined project execution.
+                </MissionItem>
+                <MissionItem>
+                  Build long-term partnerships and local capability that contribute
+                  to sustainable infrastructure development.
+                </MissionItem>
+              </div>
             </div>
           </div>
         </section>
 
-        <section>
-          <div className="flex items-end justify-between gap-4 flex-wrap">
+        {/* MARKETS + VALUES */}
+        <section className="mx-auto max-w-6xl px-4 py-16 md:py-20">
+          <div className="grid gap-12 lg:grid-cols-2">
             <div>
-              <div className="text-sm font-bold uppercase tracking-wide text-blue-700">
+              <div className="text-sm font-bold uppercase tracking-[0.16em] text-blue-700">
                 Markets We Support
               </div>
-              <h2 className="mt-2 text-3xl font-extrabold text-slate-900">
+              <h2 className="mt-3 text-3xl font-extrabold text-slate-950">
                 Industries served
+              </h2>
+
+              <div className="mt-7 grid grid-cols-1 gap-y-3 sm:grid-cols-2">
+                {INDUSTRIES.map((item) => (
+                  <div key={item} className="flex items-center gap-3 text-slate-700">
+                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                    <span className="font-semibold">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <div className="text-sm font-bold uppercase tracking-[0.16em] text-emerald-700">
+                How We Work
+              </div>
+              <h2 className="mt-3 text-3xl font-extrabold text-slate-950">
+                Corporate values
+              </h2>
+
+              <div className="mt-7 flex flex-wrap gap-3">
+                {VALUES.map((value) => (
+                  <span
+                    key={value}
+                    className="rounded-full border border-slate-300 bg-slate-50 px-4 py-2 text-sm font-semibold text-slate-700"
+                  >
+                    {value}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="border-t border-slate-200 bg-slate-50">
+          <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-14 md:flex-row md:items-center md:justify-between">
+            <div className="max-w-2xl">
+              <div className="text-sm font-bold uppercase tracking-[0.16em] text-slate-500">
+                Work with Nanotel Africa
+              </div>
+
+              <h2 className="mt-2 text-2xl font-extrabold text-slate-950 md:text-3xl">
+                Explore our capabilities or start a conversation.
               </h2>
             </div>
 
-            <NavLink
-              to="/services"
-              className="text-sm font-extrabold text-blue-800 hover:underline"
-            >
-              View detailed Business Lines →
-            </NavLink>
-          </div>
-
-          <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {INDUSTRIES.map((item) => (
-              <div
-                key={item}
-                className="rounded-2xl border border-slate-200 bg-white px-5 py-5 shadow-sm"
+            <div className="flex flex-wrap gap-3">
+              <NavLink
+                to="/services"
+                className="rounded-xl bg-slate-950 px-6 py-3 font-extrabold text-white transition hover:bg-slate-800"
               >
-                <div className="flex items-center gap-3">
-                  <span className="h-2.5 w-2.5 rounded-full bg-emerald-500" />
-                  <span className="font-bold text-slate-900">{item}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
+                View Business Lines
+              </NavLink>
 
-        <section className="rounded-3xl bg-gradient-to-r from-slate-950 via-blue-950 to-emerald-950 text-white p-8 md:p-10 shadow-xl">
-          <div className="max-w-3xl">
-            <div className="text-sm font-bold uppercase tracking-wide text-white/65">
-              Work with Nanotel Africa
+              <NavLink
+                to="/contact?department=partners"
+                className="rounded-xl border border-slate-300 bg-white px-6 py-3 font-bold text-slate-900 transition hover:bg-slate-100"
+              >
+                Partner with Us
+              </NavLink>
             </div>
-            <h2 className="mt-3 text-3xl font-extrabold">
-              From strategy to field execution.
-            </h2>
-            <p className="mt-4 text-white/75 leading-relaxed">
-              Explore our Business Lines for detailed capabilities, delivery scope,
-              and the infrastructure environments we support.
-            </p>
-          </div>
-
-          <div className="mt-7 flex flex-wrap gap-3">
-            <NavLink
-              to="/services"
-              className="px-6 py-3 rounded-2xl bg-white text-slate-950 font-extrabold hover:bg-white/90 transition"
-            >
-              View Business Lines
-            </NavLink>
-
-            <NavLink
-              to="/contact?department=partners"
-              className="px-6 py-3 rounded-2xl bg-white/10 text-white font-bold border border-white/15 hover:bg-white/15 transition"
-            >
-              Partner with Us
-            </NavLink>
-
-            <NavLink
-              to="/contact"
-              className="px-6 py-3 rounded-2xl bg-white/10 text-white font-bold border border-white/15 hover:bg-white/15 transition"
-            >
-              Contact
-            </NavLink>
           </div>
         </section>
       </main>
+    </div>
+  );
+}
+
+function ProfileRow({ label, value }) {
+  return (
+    <div className="grid grid-cols-[90px_1fr] gap-4 py-3 first:pt-0 last:pb-0">
+      <dt className="text-sm font-semibold text-slate-500">{label}</dt>
+      <dd className="text-sm font-bold text-slate-900">{value}</dd>
+    </div>
+  );
+}
+
+function MissionItem({ children }) {
+  return (
+    <div className="flex gap-3">
+      <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400" />
+      <p className="leading-relaxed text-white/75">{children}</p>
     </div>
   );
 }
