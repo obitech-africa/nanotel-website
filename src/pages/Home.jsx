@@ -23,32 +23,38 @@ const focusAreas = [
   {
     title: "Telecom Infrastructure",
     desc: "Fiber deployment, tower support, base station installation, site upgrades, and network maintenance.",
-    icon: "📡",
+    icon: <IconTower />,
+    accent: "blue",
   },
   {
     title: "Energy Systems",
     desc: "Solar, hybrid power, battery backup, and power systems for telecom and ICT infrastructure.",
-    icon: "⚡",
+    icon: <IconBolt />,
+    accent: "amber",
   },
   {
     title: "ICT Infrastructure",
     desc: "Structured cabling, network setup, systems integration, and technical infrastructure support.",
-    icon: "🖧",
+    icon: <IconNetwork />,
+    accent: "violet",
   },
   {
     title: "Data Centres",
     desc: "Data centre installation support, server rooms, racks, power, cooling, cabling, and commissioning.",
-    icon: "🏢",
+    icon: <IconDataCentre />,
+    accent: "cyan",
   },
   {
     title: "Cloud & Data Platforms",
     desc: "Cloud support, data systems, digital platforms, dashboards, and secure operational visibility.",
-    icon: "☁️",
+    icon: <IconCloud />,
+    accent: "emerald",
   },
   {
     title: "Network Operations",
     desc: "Network monitoring, optimization, maintenance planning, and technical operations support.",
-    icon: "📊",
+    icon: <IconOperations />,
+    accent: "indigo",
   },
 ];
 
@@ -62,23 +68,63 @@ const industries = [
 ];
 
 const capabilityStats = [
+  { title: "Telecom", label: "Infrastructure" },
+  { title: "ICT", label: "Solutions" },
+  { title: "Energy", label: "Systems" },
+  { title: "Digital", label: "Infrastructure" },
+];
+
+const projectSupport = [
   {
-    title: "Telecom",
-    label: "Infrastructure",
+    title: "Network Design",
+    text: "Telecom planning, site assessment, network architecture, and engineering support.",
   },
   {
-    title: "ICT",
-    label: "Solutions",
+    title: "Infrastructure Deployment",
+    text: "Fiber works, base station support, tower upgrades, and field operations.",
   },
   {
-    title: "Energy",
-    label: "Systems",
+    title: "Digital Infrastructure",
+    text: "Data centre environments, ICT systems, cloud support, and structured cabling.",
   },
   {
-    title: "Digital",
-    label: "Infrastructure",
+    title: "Energy Systems",
+    text: "Solar, hybrid power, battery backup, and energy support for infrastructure sites.",
   },
 ];
+
+const focusStyles = {
+  blue: {
+    icon: "border-blue-200 bg-blue-50 text-blue-700 group-hover:bg-blue-700 group-hover:text-white",
+    card: "hover:border-blue-300 hover:bg-blue-50/50",
+    bar: "bg-blue-600",
+  },
+  amber: {
+    icon: "border-amber-200 bg-amber-50 text-amber-700 group-hover:bg-amber-500 group-hover:text-slate-950",
+    card: "hover:border-amber-300 hover:bg-amber-50/50",
+    bar: "bg-amber-500",
+  },
+  violet: {
+    icon: "border-violet-200 bg-violet-50 text-violet-700 group-hover:bg-violet-700 group-hover:text-white",
+    card: "hover:border-violet-300 hover:bg-violet-50/50",
+    bar: "bg-violet-600",
+  },
+  cyan: {
+    icon: "border-cyan-200 bg-cyan-50 text-cyan-700 group-hover:bg-cyan-700 group-hover:text-white",
+    card: "hover:border-cyan-300 hover:bg-cyan-50/50",
+    bar: "bg-cyan-600",
+  },
+  emerald: {
+    icon: "border-emerald-200 bg-emerald-50 text-emerald-700 group-hover:bg-emerald-700 group-hover:text-white",
+    card: "hover:border-emerald-300 hover:bg-emerald-50/50",
+    bar: "bg-emerald-600",
+  },
+  indigo: {
+    icon: "border-indigo-200 bg-indigo-50 text-indigo-700 group-hover:bg-indigo-700 group-hover:text-white",
+    card: "hover:border-indigo-300 hover:bg-indigo-50/50",
+    bar: "bg-indigo-600",
+  },
+};
 
 export default function Home() {
   const [slide, setSlide] = useState(0);
@@ -113,19 +159,19 @@ export default function Home() {
             <img
               src={item.image}
               alt={item.title}
-              className="absolute inset-0 h-full w-full object-cover scale-105"
+              className="absolute inset-0 h-full w-full scale-105 object-cover"
               loading={index === 0 ? "eager" : "lazy"}
               onError={(event) => {
                 event.currentTarget.style.display = "none";
               }}
             />
 
-            <div className="absolute inset-0 bg-gradient-to-r from-slate-1200/90 via-slate-900/75 to-emerald-950/60" />
+            <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-900/78 to-emerald-950/60" />
 
             <div className="relative z-10 mx-auto flex h-full max-w-6xl items-center px-4">
               <div className="max-w-2xl text-white">
-                <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white/85">
-                   Telecommunication • ICT • Digital Infrastructure
+                <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white/85 backdrop-blur-sm">
+                  Telecommunications • ICT • Digital Infrastructure
                 </div>
 
                 <h1 className="mt-5 text-4xl font-extrabold leading-tight md:text-5xl">
@@ -146,14 +192,14 @@ export default function Home() {
 
                   <NavLink
                     to="/overview"
-                    className="rounded-xl border border-white/30 px-6 py-3 font-bold text-white transition hover:bg-white/10"
+                    className="rounded-xl border border-white/30 bg-white/5 px-6 py-3 font-bold text-white transition hover:bg-white/12"
                   >
                     Company Overview
                   </NavLink>
 
                   <NavLink
                     to="/contact"
-                    className="rounded-xl border border-white/30 px-6 py-3 font-bold text-white transition hover:bg-white/10"
+                    className="rounded-xl border border-white/30 bg-white/5 px-6 py-3 font-bold text-white transition hover:bg-white/12"
                   >
                     Contact Us
                   </NavLink>
@@ -166,7 +212,7 @@ export default function Home() {
         <button
           type="button"
           onClick={previousSlide}
-          className="absolute left-6 top-1/2 z-20 hidden h-12 w-12 -translate-y-1/2 rounded-full border border-white/20 bg-white/10 text-3xl leading-none text-white transition hover:bg-white/20 md:block"
+          className="absolute left-6 top-1/2 z-20 hidden h-12 w-12 -translate-y-1/2 rounded-full border border-white/20 bg-white/10 text-3xl leading-none text-white backdrop-blur-sm transition hover:bg-white/20 md:block"
           aria-label="Previous slide"
         >
           ‹
@@ -175,7 +221,7 @@ export default function Home() {
         <button
           type="button"
           onClick={nextSlide}
-          className="absolute right-6 top-1/2 z-20 hidden h-12 w-12 -translate-y-1/2 rounded-full border border-white/20 bg-white/10 text-3xl leading-none text-white transition hover:bg-white/20 md:block"
+          className="absolute right-6 top-1/2 z-20 hidden h-12 w-12 -translate-y-1/2 rounded-full border border-white/20 bg-white/10 text-3xl leading-none text-white backdrop-blur-sm transition hover:bg-white/20 md:block"
           aria-label="Next slide"
         >
           ›
@@ -187,8 +233,8 @@ export default function Home() {
               key={item.title}
               type="button"
               onClick={() => setSlide(index)}
-              className={`h-3 w-3 rounded-full transition ${
-                slide === index ? "bg-white" : "bg-white/40"
+              className={`h-3 rounded-full transition-all ${
+                slide === index ? "w-8 bg-white" : "w-3 bg-white/40"
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />
@@ -196,22 +242,57 @@ export default function Home() {
         </div>
       </section>
 
+      {/* CORPORATE INTRODUCTION */}
+      <section className="border-b border-slate-200 bg-white">
+        <div className="mx-auto max-w-6xl px-4 py-14 md:py-16">
+          <div className="grid gap-8 lg:grid-cols-[1.35fr_0.65fr] lg:items-end">
+            <div>
+              <div className="text-sm font-bold uppercase tracking-[0.16em] text-blue-700">
+                Nanotel Africa
+              </div>
+
+              <h2 className="mt-3 max-w-4xl text-3xl font-extrabold tracking-tight text-slate-950 md:text-4xl">
+                Telecommunications and technology infrastructure supporting Africa&apos;s digital transformation.
+              </h2>
+
+              <p className="mt-5 max-w-4xl text-lg leading-relaxed text-slate-700">
+                Nanotel Africa is a telecommunications and technology infrastructure
+                company focused on supporting connectivity, digital transformation,
+                and infrastructure development across African markets.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap gap-3 lg:justify-end">
+              <NavLink
+                to="/about"
+                className="rounded-xl bg-slate-950 px-6 py-3 font-extrabold text-white transition hover:bg-slate-800"
+              >
+                About Nanotel
+              </NavLink>
+
+              <NavLink
+                to="/overview"
+                className="rounded-xl border border-slate-300 bg-white px-6 py-3 font-bold text-slate-900 transition hover:bg-slate-100"
+              >
+                Company Overview
+              </NavLink>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* AREAS OF FOCUS */}
-      <section className="bg-white py-16">
+      <section className="bg-slate-100/80 py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-4">
           <SectionHeader
+            eyebrow="Core Focus"
             title="Our Areas of Focus"
             text="Nanotel Africa supports infrastructure projects across telecommunications, energy, ICT systems, data environments, and network operations."
           />
 
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {focusAreas.map((item) => (
-              <TechCard
-                key={item.title}
-                title={item.title}
-                desc={item.desc}
-                icon={item.icon}
-              />
+              <FocusCard key={item.title} item={item} />
             ))}
           </div>
         </div>
@@ -219,9 +300,13 @@ export default function Home() {
 
       {/* AFRICA SECTION */}
       <section className="bg-slate-950 py-20 text-white">
-        <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 md:grid-cols-2">
+        <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 md:grid-cols-[0.9fr_1.1fr]">
           <div>
-            <h2 className="text-3xl font-extrabold md:text-4xl">
+            <div className="text-sm font-bold uppercase tracking-[0.16em] text-emerald-300">
+              Pan-African Vision
+            </div>
+
+            <h2 className="mt-3 text-3xl font-extrabold md:text-4xl">
               Infrastructure Support Across African Markets
             </h2>
 
@@ -237,32 +322,29 @@ export default function Home() {
               diverse environments.
             </p>
 
-            <div className="mt-8 grid grid-cols-2 gap-6">
+            <div className="mt-8 grid grid-cols-2 gap-4">
               {capabilityStats.map((item) => (
                 <Stat key={item.title} title={item.title} label={item.label} />
               ))}
             </div>
           </div>
 
-          <div className="relative">
-            <div className="overflow-hidden rounded-3xl border border-white/10 shadow-2xl">
-              <img
-                src={`${import.meta.env.BASE_URL}images/hero/africa-infrastructure.jpg`}
-                className="h-[380px] w-full object-cover opacity-85"
-                alt="African infrastructure"
-                loading="lazy"
-                onError={(event) => {
-                  event.currentTarget.style.display = "none";
-                }}
-              />
-            </div>
+          <div className="relative overflow-hidden rounded-3xl border border-white/10 shadow-2xl">
+            <img
+              src={`${import.meta.env.BASE_URL}images/hero/africa-infrastructure.jpg`}
+              className="h-[430px] w-full object-cover"
+              alt="African infrastructure"
+              loading="lazy"
+              onError={(event) => {
+                event.currentTarget.style.display = "none";
+              }}
+            />
 
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="rounded-2xl border border-white/20 bg-black/40 px-6 py-4 text-center backdrop-blur-sm">
-                <div className="text-2xl font-bold">Pan-African Vision</div>
-                <div className="mt-1 text-sm text-white/80">
-                  Reliable infrastructure for digital growth
-                </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/65 via-transparent to-transparent" />
+
+            <div className="absolute bottom-5 left-5 rounded-xl border border-white/15 bg-slate-950/65 px-5 py-3 backdrop-blur-md">
+              <div className="font-extrabold text-white">
+                Reliable infrastructure for digital growth
               </div>
             </div>
           </div>
@@ -270,69 +352,86 @@ export default function Home() {
       </section>
 
       {/* INDUSTRIES SERVED */}
-      <section className="bg-white py-20">
+      <section className="bg-gradient-to-br from-blue-950 via-slate-950 to-emerald-950 py-20 text-white">
         <div className="mx-auto max-w-6xl px-4">
           <SectionHeader
+            eyebrow="Markets We Support"
             title="Industries We Serve"
             text="We support organizations that require reliable infrastructure, technical delivery, and long-term operational support."
+            dark
           />
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {industries.map((item) => (
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {industries.map((item, index) => (
               <div
                 key={item}
-                className="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm transition hover:shadow-lg"
+                className="group rounded-2xl border border-white/10 bg-white p-6 text-slate-950 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
               >
-                <div className="flex items-start gap-3">
-                  <span className="mt-1 h-3 w-3 rounded-full bg-emerald-500" />
-                  <h3 className="font-bold text-slate-900">{item}</h3>
+                <div className="flex items-start gap-4">
+                  <span className="mt-1.5 text-xs font-extrabold text-emerald-600">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+
+                  <h3 className="font-extrabold">{item}</h3>
                 </div>
+
+                <div className="mt-5 h-1 w-10 rounded-full bg-emerald-500 transition-all duration-300 group-hover:w-20" />
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* QUICK SERVICES */}
-      <section className="mx-auto max-w-6xl px-4 py-16">
-        <SectionHeader
-          title="How We Support Projects"
-          text="Our work is centered on practical delivery, technical support, and dependable infrastructure outcomes."
+      {/* PROJECT SUPPORT — BTS IMAGE */}
+      <section className="relative overflow-hidden py-20 text-white">
+        <img
+          src={`${import.meta.env.BASE_URL}images/bts.jpg`}
+          alt="Telecommunications base station infrastructure"
+          className="absolute inset-0 h-full w-full object-cover"
+          loading="lazy"
+          onError={(event) => {
+            event.currentTarget.style.display = "none";
+          }}
         />
 
-        <div className="mt-12 grid gap-6 md:grid-cols-4">
-          <Card
-            title="Network Design"
-            text="Telecom planning, site assessment, network architecture, and engineering support."
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/88 to-blue-950/78" />
+
+        <div className="relative mx-auto max-w-6xl px-4">
+          <SectionHeader
+            eyebrow="Project Delivery"
+            title="How We Support Projects"
+            text="Our work is centered on practical delivery, technical support, and dependable infrastructure outcomes."
+            dark
           />
 
-          <Card
-            title="Infrastructure Deployment"
-            text="Fiber works, base station support, tower upgrades, and field operations."
-          />
-
-          <Card
-            title="Digital Infrastructure"
-            text="Data centre environments, ICT systems, cloud support, and structured cabling."
-          />
-
-          <Card
-            title="Energy Systems"
-            text="Solar, hybrid power, battery backup, and energy support for infrastructure sites."
-          />
+          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {projectSupport.map((item) => (
+              <div
+                key={item.title}
+                className="rounded-2xl border border-white/15 bg-white p-6 text-slate-950 shadow-xl transition hover:-translate-y-1 hover:shadow-2xl"
+              >
+                <h3 className="text-lg font-extrabold">{item.title}</h3>
+                <p className="mt-3 leading-relaxed text-slate-600">{item.text}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* CTA */}
       <section className="bg-slate-950 py-16 text-white">
         <div className="mx-auto max-w-6xl px-4">
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-8 md:p-10">
+          <div className="overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-white/5 to-emerald-500/10 p-8 md:p-10">
             <div className="max-w-3xl">
-              <h2 className="text-3xl font-extrabold">
+              <div className="text-sm font-bold uppercase tracking-[0.16em] text-emerald-300">
+                Work with Nanotel Africa
+              </div>
+
+              <h2 className="mt-3 text-3xl font-extrabold">
                 Looking for a reliable infrastructure partner?
               </h2>
 
-              <p className="mt-4 text-white/80 leading-relaxed">
+              <p className="mt-4 leading-relaxed text-white/80">
                 Speak with Nanotel Africa about telecom infrastructure, ICT
                 systems, energy solutions, and digital infrastructure support.
               </p>
@@ -348,7 +447,7 @@ export default function Home() {
 
               <NavLink
                 to="/contact?department=partners"
-                className="rounded-xl border border-white/30 px-6 py-3 font-bold text-white transition hover:bg-white/10"
+                className="rounded-xl border border-white/30 bg-white/5 px-6 py-3 font-bold text-white transition hover:bg-white/10"
               >
                 Partner with Us
               </NavLink>
@@ -360,46 +459,127 @@ export default function Home() {
   );
 }
 
-function SectionHeader({ title, text }) {
+function SectionHeader({ eyebrow, title, text, dark = false }) {
   return (
     <div className="mx-auto max-w-3xl text-center">
-      <h2 className="text-3xl font-extrabold text-slate-900 md:text-4xl">
+      {eyebrow && (
+        <div
+          className={`text-sm font-bold uppercase tracking-[0.16em] ${
+            dark ? "text-emerald-300" : "text-blue-700"
+          }`}
+        >
+          {eyebrow}
+        </div>
+      )}
+
+      <h2
+        className={`mt-3 text-3xl font-extrabold md:text-4xl ${
+          dark ? "text-white" : "text-slate-900"
+        }`}
+      >
         {title}
       </h2>
 
-      <p className="mt-4 leading-relaxed text-slate-600">{text}</p>
+      <p
+        className={`mt-4 leading-relaxed ${
+          dark ? "text-white/70" : "text-slate-600"
+        }`}
+      >
+        {text}
+      </p>
     </div>
   );
 }
 
-function Card({ title, text }) {
+function FocusCard({ item }) {
+  const styles = focusStyles[item.accent];
+
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-lg transition hover:-translate-y-1 hover:shadow-xl">
-      <h3 className="text-lg font-bold text-slate-900">{title}</h3>
-      <p className="mt-2 leading-relaxed text-slate-600">{text}</p>
-    </div>
-  );
-}
+    <article
+      className={`group rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${styles.card}`}
+    >
+      <div
+        className={`flex h-12 w-12 items-center justify-center rounded-2xl border transition-all duration-300 ${styles.icon}`}
+      >
+        {item.icon}
+      </div>
 
-function TechCard({ title, desc, icon }) {
-  return (
-    <div className="group rounded-2xl border border-slate-200 bg-slate-50 p-6 transition hover:-translate-y-1 hover:shadow-xl">
-      <div className="text-4xl">{icon}</div>
+      <h3 className="mt-5 text-lg font-extrabold text-slate-950">
+        {item.title}
+      </h3>
 
-      <h3 className="mt-4 text-lg font-bold text-slate-900">{title}</h3>
+      <p className="mt-3 leading-relaxed text-slate-600">{item.desc}</p>
 
-      <p className="mt-2 leading-relaxed text-slate-600">{desc}</p>
-
-      <div className="mt-4 h-1 w-0 bg-emerald-500 transition-all group-hover:w-12" />
-    </div>
+      <div
+        className={`mt-6 h-1 w-10 rounded-full transition-all duration-300 group-hover:w-20 ${styles.bar}`}
+      />
+    </article>
   );
 }
 
 function Stat({ title, label }) {
   return (
-    <div className="rounded-xl border border-white/10 bg-white/5 p-4 text-center">
-      <div className="text-2xl font-extrabold text-emerald-400">{title}</div>
-      <div className="mt-1 text-sm text-white/80">{label}</div>
+    <div className="rounded-xl border border-white/10 bg-white/5 p-4 text-center backdrop-blur-sm">
+      <div className="text-xl font-extrabold text-emerald-300 md:text-2xl">
+        {title}
+      </div>
+      <div className="mt-1 text-sm text-white/75">{label}</div>
     </div>
+  );
+}
+
+function IconTower() {
+  return (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M12 3l3 18H9l3-18z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+      <path d="M7 8a7 7 0 0110 0" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      <path d="M9 11a4 4 0 016 0" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function IconBolt() {
+  return (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M13 2L4 14h7l-1 8 10-14h-7V2z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function IconNetwork() {
+  return (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <rect x="3" y="4" width="7" height="5" rx="1" stroke="currentColor" strokeWidth="1.8" />
+      <rect x="14" y="4" width="7" height="5" rx="1" stroke="currentColor" strokeWidth="1.8" />
+      <rect x="8.5" y="15" width="7" height="5" rx="1" stroke="currentColor" strokeWidth="1.8" />
+      <path d="M6.5 9v3h11V9M12 12v3" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function IconDataCentre() {
+  return (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <rect x="5" y="3" width="14" height="18" rx="2" stroke="currentColor" strokeWidth="1.8" />
+      <path d="M8 8h8M8 12h8M8 16h5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      <circle cx="16" cy="16" r="1" fill="currentColor" />
+    </svg>
+  );
+}
+
+function IconCloud() {
+  return (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M7 18a4 4 0 010-8 5 5 0 019.7-1.5A4 4 0 1117 18H7z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function IconOperations() {
+  return (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M4 19V9M10 19V5M16 19v-7M22 19H2" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      <path d="M4 7l6-4 6 6 4-3" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
   );
 }
