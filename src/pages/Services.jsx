@@ -1,533 +1,376 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const CORE_LINES = [
+const asset = (path) => `${import.meta.env.BASE_URL}images/${path}`;
+
+const FEATURED_LINES = [
   {
-    title: "Telecom Infrastructure & EPC",
-    desc: "End-to-end delivery for telecom rollout, expansion, modernization, and site infrastructure programs.",
+    title: "Telecom EPC & Infrastructure",
+    eyebrow: "Core Infrastructure",
+    desc: "End-to-end telecommunications infrastructure delivery for network expansion, modernization, and field deployment programs.",
     bullets: [
-      "Tower construction and upgrades",
-      "Telecom site builds and civil works",
-      "Fiber deployment and backbone expansion",
-      "BTS and network equipment installation",
-      "Power integration, testing, and commissioning",
-      "Modernization and upgrade programs",
+      "Fiber rollout and backbone expansion",
+      "Civil works, tower construction, and site modernization",
+      "Base station installation and integration",
+      "Network testing, commissioning, and acceptance",
+      "Site surveys, upgrades, and field engineering support",
     ],
-    icon: <IconTower />,
-    image: "images/telecom-1.jpg",
-  },
-  {
-    title: "Network Operations & Managed Services",
-    desc: "SLA-driven operations and maintenance focused on uptime, performance, quality, and field execution.",
-    bullets: [
-      "Preventive and corrective maintenance",
-      "Network monitoring and site maintenance",
-      "SLA and KPI management",
-      "Network optimization",
-      "Field operations and reporting",
-      "Quality assurance and corrective action",
+    images: [
+      { src: asset("gallery-1.jpg"), alt: "Telecommunications infrastructure environment" },
+      { src: asset("telecom-1.jpg"), alt: "Telecom field infrastructure" },
+      { src: asset("telecom-2.jpg"), alt: "Telecom network deployment" },
+      { src: asset("telecom-3.jpg"), alt: "Telecom infrastructure project" },
+      { src: asset("gallery-2.jpg"), alt: "Network deployment environment" },
     ],
-    icon: <IconWrench />,
-    image: "images/telecom-2.jpg",
   },
   {
     title: "Energy & Power Infrastructure",
-    desc: "Power systems for telecom, ICT, and digital infrastructure environments that require reliable, resilient operations.",
+    eyebrow: "Resilient Power",
+    desc: "Reliable power infrastructure for telecom, ICT, enterprise, and remote operating environments.",
     bullets: [
-      "Solar and hybrid power systems",
-      "Battery and backup systems",
-      "Rectifiers and DC power",
-      "Generator integration",
-      "Energy monitoring",
-      "Telecom-site and data-centre power support",
+      "Solar-powered telecom and ICT sites",
+      "Hybrid energy systems",
+      "Battery backup and power resilience",
+      "Power monitoring and protection systems",
+      "Energy efficiency and remote-site power support",
     ],
-    icon: <IconBolt />,
-    image: "images/solar-site.jpg",
+    images: [
+      { src: asset("gallery-3.jpg"), alt: "Energy and power infrastructure" },
+      { src: asset("energy-1.jpg"), alt: "Telecom energy infrastructure" },
+      { src: asset("energy-2.jpg"), alt: "Renewable energy system" },
+      { src: asset("energy-3.jpg"), alt: "Power infrastructure environment" },
+    ],
   },
   {
     title: "ICT, Cloud & Digital Infrastructure",
-    desc: "Enterprise and operational technology systems that connect infrastructure, users, data, and digital services.",
+    eyebrow: "Digital Systems",
+    desc: "Enterprise ICT, cloud integration, structured networks, and digital infrastructure that support modern operations.",
     bullets: [
-      "Enterprise networking",
-      "Structured cabling",
-      "ICT infrastructure",
-      "Cloud integration",
-      "Operational dashboards",
-      "Systems integration and support",
+      "Enterprise network architecture and deployment",
+      "Cloud readiness, integration, and technical support",
+      "Structured cabling and systems integration",
+      "Data platforms, dashboards, and operational visibility",
+      "Security, access governance, and technical lifecycle support",
     ],
-    icon: <IconCloud />,
-    image: "images/equipment-2.jpg",
+    images: [
+      { src: asset("gallery-4.jpg"), alt: "ICT cloud and digital infrastructure" },
+    ],
   },
   {
     title: "Data Centre Infrastructure",
-    desc: "Design support, installation, integration, and commissioning for reliable data-centre and server-room environments.",
+    eyebrow: "Critical Facilities",
+    desc: "Data centre infrastructure design, installation, commissioning, and operational support for reliable digital environments.",
     bullets: [
-      "Rack layout and installation",
-      "Structured cabling",
-      "UPS and battery systems",
-      "Cooling and power integration",
-      "Monitoring systems",
-      "Testing, documentation, and commissioning",
+      "Rack layout and structured cabling",
+      "Power, UPS, batteries, and monitoring",
+      "Cooling and environmental infrastructure",
+      "Equipment installation and integration",
+      "Testing, documentation, commissioning, and support",
     ],
-    icon: <IconDataCenter />,
-    image: "images/datacenter-1.jpg",
+    images: [
+      { src: asset("data-centre-infrastructure.jpg"), alt: "Modern data centre server infrastructure" },
+      { src: asset("datacenter-1.jpg"), alt: "Data centre installation environment" },
+      { src: asset("datacenter-2.jpg"), alt: "Data centre racks and infrastructure" },
+      { src: asset("datacenter-3.jpg"), alt: "Data centre technical environment" },
+      { src: asset("gallery-5.jpg"), alt: "Data centre infrastructure project" },
+    ],
   },
   {
-    title: "Connectivity & Remote Infrastructure",
-    desc: "Connectivity solutions for rural, remote, enterprise, and hard-to-reach environments.",
+    title: "OEM & Technology Partnerships",
+    eyebrow: "Equipment Ecosystem",
+    desc: "Technical and delivery support for OEMs, equipment vendors, technology partners, and regional infrastructure programs.",
     bullets: [
-      "Satellite and VSAT deployment",
-      "Remote enterprise connectivity",
-      "Tower backhaul support",
-      "Rural connectivity",
-      "Hybrid connectivity solutions",
-      "Field maintenance and support",
+      "Equipment sourcing and technical alignment",
+      "OEM coordination and local deployment support",
+      "Installation, integration, and commissioning",
+      "Acceptance testing and documentation",
+      "Maintenance and after-sales technical support",
     ],
-    icon: <IconSatellite />,
-    image: "images/hero/satellite.jpg",
+    images: [
+      { src: asset("equipment-1.jpg"), alt: "Telecommunications equipment" },
+      { src: asset("equipment-2.jpg"), alt: "Network equipment infrastructure" },
+      { src: asset("equipment-3.jpg"), alt: "Carrier equipment environment" },
+    ],
+  },
+  {
+    title: "Managed Services & Field Operations",
+    eyebrow: "Operations",
+    desc: "SLA-driven field operations and technical support focused on uptime, quality, safety, and measurable service performance.",
+    bullets: [
+      "Preventive and corrective maintenance",
+      "Field service management",
+      "Network optimization and KPI support",
+      "Quality assurance and reporting",
+      "Multi-vendor technical operations",
+    ],
+    images: [
+      { src: asset("gallery-6.jpg"), alt: "Telecom field operations environment" },
+    ],
   },
 ];
 
-const DELIVERY_CAPABILITIES = [
+const SPECIALIST_LINES = [
   {
-    title: "OEM & Technology Partnerships",
-    text: "Regional deployment, installation, integration, commissioning, documentation, and field support for technology vendors and OEM programs.",
-    icon: <IconHandshake />,
-  },
-  {
-    title: "Operator & TowerCo Support",
-    text: "Technical delivery and managed support for mobile operators, ISPs, TowerCos, and network infrastructure owners.",
+    title: "Operators & TowerCos Support",
+    desc: "Infrastructure services, upgrades, multi-vendor support, SLA maintenance, and technical delivery for operators and tower companies.",
     icon: <IconShield />,
   },
   {
-    title: "Technical Workforce & Project Resourcing",
-    text: "Deployment-ready engineering and field resources for projects, supervision, quality assurance, and regional delivery requirements.",
-    icon: <IconUsers />,
+    title: "Satellite & Remote Connectivity",
+    desc: "VSAT, satellite backhaul, and connectivity support for rural, remote, and hard-to-reach locations.",
+    icon: <IconSatellite />,
   },
-  {
-    title: "Equipment Supply & Integration",
-    text: "Support for sourcing, supplying, integrating, and commissioning telecom, energy, network, and digital-infrastructure equipment.",
-    icon: <IconEquipment />,
-  },
-];
-
-const EMERGING = [
   {
     title: "AI & Smart Network Intelligence",
-    text: "Predictive maintenance, anomaly detection, network analytics, automation, and smart operational monitoring.",
+    desc: "Analytics, automation, anomaly detection, dashboards, and predictive maintenance support for network operations.",
     icon: <IconBrain />,
   },
   {
     title: "EV Charging & Smart Mobility",
-    text: "Charging infrastructure planning, power assessment, deployment, monitoring, and operations support.",
+    desc: "EV charging infrastructure planning, deployment, monitoring, and support for cities, fleets, and transport corridors.",
     icon: <IconBolt />,
   },
-];
-
-const INDUSTRIES = [
-  "Mobile Network Operators",
-  "Internet Service Providers",
-  "Tower Companies",
-  "Enterprises",
-  "Government & Public Sector",
-  "Utilities",
-  "Institutions & Development Organizations",
+  {
+    title: "Workforce & Training",
+    desc: "Technical workforce scaling, training, certification support, supervision, and deployment-ready field teams.",
+    icon: <IconUsers />,
+  },
 ];
 
 export default function Services() {
   return (
     <div className="min-h-screen bg-slate-50">
-      {/* HERO */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950 to-emerald-950" />
         <div className="absolute inset-0 opacity-25 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.14),transparent_42%),radial-gradient(circle_at_75%_25%,rgba(34,197,94,0.14),transparent_45%),radial-gradient(circle_at_50%_85%,rgba(59,130,246,0.14),transparent_50%)]" />
 
-        <div className="relative mx-auto max-w-6xl px-4 py-14">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-4 py-2 text-sm text-white/80">
+        <div className="relative max-w-6xl mx-auto px-4 py-16 text-white">
+          <div className="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/10 px-4 py-2 text-white/80 text-sm">
             <span className="h-2 w-2 rounded-full bg-emerald-400" />
-            Business Lines • Delivery • Innovation
+            Business Lines • Delivery • Infrastructure • Innovation
           </div>
 
-          <h1 className="mt-5 text-3xl font-extrabold tracking-tight text-white md:text-5xl">
+          <h1 className="mt-5 text-4xl md:text-5xl font-extrabold tracking-tight">
             Business Lines
           </h1>
 
-          <p className="mt-4 max-w-3xl text-base text-white/80 md:text-lg">
-            Telecom infrastructure, managed operations, energy systems, digital
-            infrastructure, data centres, and connectivity solutions — delivered
-            for real operating environments across Africa.
+          <p className="mt-5 max-w-3xl text-white/80 text-lg leading-relaxed">
+            Nanotel Africa combines telecommunications, power, ICT, data centre,
+            equipment, and field-operations capability to support infrastructure
+            projects from planning through deployment and long-term operations.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
             <NavLink
               to="/contact"
-              className="rounded-2xl bg-white px-5 py-3 font-extrabold text-slate-950 shadow-lg transition hover:bg-white/90"
+              className="px-6 py-3 rounded-2xl bg-white text-slate-950 font-extrabold hover:bg-white/90 transition"
             >
-              Project Inquiry
+              Request a Proposal
             </NavLink>
 
             <NavLink
               to="/contact?department=partners"
-              className="rounded-2xl border border-white/15 bg-white/10 px-5 py-3 font-bold text-white transition hover:bg-white/15"
+              className="px-6 py-3 rounded-2xl bg-white/10 text-white font-bold border border-white/15 hover:bg-white/15 transition"
             >
-              Partner with Nanotel
+              Partner with Us
             </NavLink>
           </div>
         </div>
       </section>
 
-      {/* INTRO */}
-      <section className="bg-slate-100 py-12">
-        <div className="mx-auto max-w-6xl px-4">
-          <div className="grid gap-6 rounded-3xl border border-slate-200 bg-gradient-to-br from-slate-100 via-blue-50 to-emerald-50 p-7 md:grid-cols-[1fr_0.75fr] md:p-10">
-            <div>
-              <div className="text-sm font-bold uppercase tracking-wider text-emerald-700">
-                Core Business Lines
-              </div>
-              <h2 className="mt-2 text-3xl font-extrabold text-slate-900">
-                What Nanotel Africa delivers
-              </h2>
-              <p className="mt-4 max-w-3xl leading-relaxed text-slate-600">
-                Our commercial focus is organized around six infrastructure and
-                technology business lines. Each line is supported by engineering,
-                project delivery, operations, integration, and partnership capability.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-2 gap-3">
-              {["Infrastructure", "Operations", "Energy", "Digital"].map((item) => (
-                <div
-                  key={item}
-                  className="rounded-2xl border border-white/70 bg-white/70 p-4 text-center font-extrabold text-slate-800"
-                >
-                  {item}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FLAGSHIP LINE */}
-      <section className="bg-white py-14">
-        <div className="mx-auto max-w-6xl px-4">
-          <div className="grid overflow-hidden rounded-3xl border border-slate-200 bg-slate-950 text-white shadow-xl lg:grid-cols-2">
-            <div className="p-7 md:p-10">
-              <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-emerald-400/30 bg-emerald-400/10 text-emerald-300">
-                {CORE_LINES[0].icon}
-              </div>
-
-              <div className="mt-5 text-sm font-bold uppercase tracking-wider text-emerald-300">
-                Flagship Business Line
-              </div>
-
-              <h2 className="mt-2 text-3xl font-extrabold">
-                {CORE_LINES[0].title}
-              </h2>
-
-              <p className="mt-4 leading-relaxed text-white/70">
-                {CORE_LINES[0].desc}
-              </p>
-
-              <ul className="mt-6 grid gap-3 text-sm text-white/80 sm:grid-cols-2">
-                {CORE_LINES[0].bullets.map((bullet) => (
-                  <li key={bullet} className="flex gap-3">
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400" />
-                    <span>{bullet}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <img
-              src={`${import.meta.env.BASE_URL}${CORE_LINES[0].image}`}
-              alt="Telecom infrastructure and EPC delivery"
-              className="h-full min-h-[340px] w-full object-cover"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* CORE GRID */}
-      <section className="bg-slate-100 py-14">
-        <div className="mx-auto max-w-6xl px-4">
-          <div className="grid gap-6 md:grid-cols-2">
-            {CORE_LINES.slice(1).map((line) => (
-              <BusinessLineCard key={line.title} line={line} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* DELIVERY CAPABILITIES */}
-      <section className="bg-white py-14">
-        <div className="mx-auto max-w-6xl px-4">
+      <main className="max-w-6xl mx-auto px-4 py-14">
+        <section>
           <div className="max-w-3xl">
-            <div className="text-sm font-bold uppercase tracking-wider text-blue-800">
-              Strategic Delivery Capabilities
+            <div className="text-sm font-bold uppercase tracking-wide text-blue-700">
+              Delivery Portfolio
             </div>
             <h2 className="mt-2 text-3xl font-extrabold text-slate-900">
-              How we extend delivery across projects and markets
+              Infrastructure capabilities
             </h2>
-            <p className="mt-4 leading-relaxed text-slate-600">
-              These capabilities support our core business lines without being treated
-              as separate commercial business lines on their own.
+            <p className="mt-3 text-slate-600 leading-relaxed">
+              Each business line combines practical engineering, field execution,
+              technical documentation, quality control, and long-term support.
             </p>
           </div>
 
-          <div className="mt-8 grid gap-5 md:grid-cols-2">
-            {DELIVERY_CAPABILITIES.map((item) => (
-              <CapabilityCard key={item.title} item={item} />
+          <div className="mt-10 grid gap-10">
+            {FEATURED_LINES.map((item) => (
+              <ServiceSection key={item.title} {...item} />
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* EMERGING */}
-      <section className="bg-gradient-to-r from-blue-950 via-slate-950 to-emerald-950 py-14 text-white">
-        <div className="mx-auto max-w-6xl px-4">
+        <section className="mt-16">
           <div className="max-w-3xl">
-            <div className="text-sm font-bold uppercase tracking-wider text-emerald-300">
-              Emerging & Future Technologies
+            <div className="text-sm font-bold uppercase tracking-wide text-emerald-700">
+              Specialist Capabilities
             </div>
-            <h2 className="mt-2 text-3xl font-extrabold">
-              Building capability for the next infrastructure cycle
+            <h2 className="mt-2 text-3xl font-extrabold text-slate-900">
+              Extending the infrastructure ecosystem
             </h2>
-            <p className="mt-4 leading-relaxed text-white/70">
-              We are developing selected capabilities that complement our core
-              infrastructure business and position Nanotel for future demand.
+            <p className="mt-3 text-slate-600 leading-relaxed">
+              These capabilities complement our core delivery portfolio and support
+              evolving connectivity, mobility, workforce, and digital operations needs.
             </p>
           </div>
 
-          <div className="mt-8 grid gap-5 md:grid-cols-2">
-            {EMERGING.map((item) => (
-              <div
-                key={item.title}
-                className="rounded-3xl border border-white/10 bg-white/10 p-6"
-              >
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-emerald-400/30 bg-emerald-400/10 text-emerald-300">
-                  {item.icon}
-                </div>
-                <h3 className="mt-5 text-xl font-extrabold">{item.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-white/70">
-                  {item.text}
-                </p>
-              </div>
+          <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {SPECIALIST_LINES.map((item) => (
+              <SpecialistCard key={item.title} {...item} />
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* ASSEMBLY & MANUFACTURING */}
-      <section className="bg-emerald-950 py-14 text-white">
-        <div className="mx-auto max-w-6xl px-4">
-          <div className="grid gap-8 md:grid-cols-[1.1fr_0.9fr] md:items-center">
-            <div>
-              <div className="text-sm font-bold uppercase tracking-wider text-emerald-300">
-                Industrial Growth Strategy
-              </div>
-              <h2 className="mt-2 text-3xl font-extrabold">
-                Local Assembly & Manufacturing
-              </h2>
-              <p className="mt-4 max-w-3xl leading-relaxed text-white/75">
-                Nanotel Africa&apos;s long-term industrial strategy includes local
-                assembly and, progressively, manufacturing of selected
-                telecommunications, energy, and digital-infrastructure equipment
-                based on market demand, technical readiness, and partnership
-                opportunities.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-2 gap-3">
-              {[
-                "Telecom equipment",
-                "Energy systems",
-                "Digital infrastructure",
-                "Knowledge transfer",
-              ].map((item) => (
-                <div
-                  key={item}
-                  className="rounded-2xl border border-white/10 bg-white/10 p-4 text-sm font-bold text-white/90"
-                >
-                  {item}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* INDUSTRIES */}
-      <section className="bg-slate-100 py-14">
-        <div className="mx-auto max-w-6xl px-4">
+        <section className="mt-16 rounded-3xl bg-slate-900 text-white p-8 md:p-10 shadow-xl">
           <div className="max-w-3xl">
-            <div className="text-sm font-bold uppercase tracking-wider text-blue-800">
-              Industries We Serve
+            <div className="text-sm font-bold uppercase tracking-wide text-white/60">
+              Project Delivery
             </div>
-            <h2 className="mt-2 text-3xl font-extrabold text-slate-900">
-              Infrastructure support across critical sectors
+            <h2 className="mt-3 text-3xl font-extrabold">
+              Let’s scope the right infrastructure solution.
             </h2>
+            <p className="mt-4 text-white/75 leading-relaxed">
+              We support operators, TowerCos, enterprises, governments, institutions,
+              OEMs, investors, and development partners across the infrastructure lifecycle.
+            </p>
           </div>
 
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {INDUSTRIES.map((industry) => (
+          <div className="mt-7 flex flex-wrap gap-3">
+            <NavLink
+              to="/contact"
+              className="px-6 py-3 rounded-2xl bg-white text-slate-950 font-extrabold hover:bg-white/90 transition"
+            >
+              Contact
+            </NavLink>
+
+            <NavLink
+              to="/contact?department=partners"
+              className="px-6 py-3 rounded-2xl bg-white/10 text-white font-bold border border-white/15 hover:bg-white/15 transition"
+            >
+              Partner & Investment Inquiries
+            </NavLink>
+          </div>
+        </section>
+      </main>
+    </div>
+  );
+}
+
+function ServiceSection({ title, eyebrow, desc, bullets, images }) {
+  const [lead, ...supporting] = images;
+
+  return (
+    <article className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+      <div className="grid lg:grid-cols-[1.05fr_0.95fr]">
+        <div className="p-7 md:p-9">
+          <div className="text-xs font-extrabold uppercase tracking-[0.16em] text-emerald-700">
+            {eyebrow}
+          </div>
+
+          <h3 className="mt-3 text-2xl md:text-3xl font-extrabold text-slate-900">
+            {title}
+          </h3>
+
+          <p className="mt-4 text-slate-600 leading-relaxed">
+            {desc}
+          </p>
+
+          <ul className="mt-6 grid gap-3 text-slate-700">
+            {bullets.map((item) => (
+              <li key={item} className="flex gap-3">
+                <span className="mt-2 h-2 w-2 rounded-full bg-blue-600 shrink-0" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="min-h-[300px] bg-slate-100">
+          <SafeImage
+            src={lead.src}
+            alt={lead.alt}
+            className="h-full min-h-[300px] w-full object-cover"
+          />
+        </div>
+      </div>
+
+      {supporting.length > 0 && (
+        <div className="border-t border-slate-200 bg-slate-50 p-5">
+          <div className={`grid gap-4 ${
+            supporting.length === 1
+              ? "grid-cols-1"
+              : supporting.length === 2
+              ? "sm:grid-cols-2"
+              : supporting.length === 3
+              ? "sm:grid-cols-3"
+              : "sm:grid-cols-2 lg:grid-cols-4"
+          }`}>
+            {supporting.map((image) => (
               <div
-                key={industry}
-                className="rounded-2xl border border-slate-200 bg-white p-5 font-bold text-slate-800 shadow-sm"
+                key={image.src}
+                className="overflow-hidden rounded-2xl border border-slate-200 bg-white"
               >
-                <span className="mr-3 inline-block h-2.5 w-2.5 rounded-full bg-emerald-500" />
-                {industry}
+                <SafeImage
+                  src={image.src}
+                  alt={image.alt}
+                  className="h-40 w-full object-cover"
+                />
               </div>
             ))}
           </div>
         </div>
-      </section>
-
-      {/* FINAL CTA */}
-      <section className="bg-slate-950 py-14 text-white">
-        <div className="mx-auto max-w-6xl px-4">
-          <div className="flex flex-col gap-6 rounded-3xl border border-white/10 bg-gradient-to-r from-blue-950 to-emerald-950 p-8 md:flex-row md:items-center md:justify-between md:p-10">
-            <div>
-              <div className="text-sm font-bold uppercase tracking-wider text-emerald-300">
-                Work with Nanotel Africa
-              </div>
-              <h2 className="mt-2 text-3xl font-extrabold">
-                Discuss your next infrastructure project
-              </h2>
-              <p className="mt-3 max-w-2xl text-white/70">
-                Talk to us about deployment, modernization, operations, energy,
-                digital infrastructure, data centres, connectivity, or partnership opportunities.
-              </p>
-            </div>
-
-            <div className="flex shrink-0 flex-wrap gap-3">
-              <NavLink
-                to="/contact"
-                className="rounded-xl bg-white px-5 py-3 font-extrabold text-slate-950 transition hover:bg-slate-100"
-              >
-                Project Inquiry
-              </NavLink>
-
-              <NavLink
-                to="/contact?department=partners"
-                className="rounded-xl border border-white/20 bg-white/10 px-5 py-3 font-bold text-white transition hover:bg-white/15"
-              >
-                Partner with Nanotel
-              </NavLink>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+      )}
+    </article>
   );
 }
 
-function BusinessLineCard({ line }) {
+function SpecialistCard({ title, desc, icon }) {
   return (
-    <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
-      <img
-        src={`${import.meta.env.BASE_URL}${line.image}`}
-        alt={line.title}
-        className="h-48 w-full object-cover"
-      />
-
-      <div className="p-6">
-        <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-slate-200 bg-slate-50">
-          {line.icon}
-        </div>
-
-        <h3 className="mt-5 text-xl font-extrabold text-slate-900">
-          {line.title}
-        </h3>
-
-        <p className="mt-2 text-sm leading-relaxed text-slate-600">
-          {line.desc}
-        </p>
-
-        <ul className="mt-5 grid gap-2 text-sm text-slate-700 sm:grid-cols-2">
-          {line.bullets.map((bullet) => (
-            <li key={bullet} className="flex gap-3">
-              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-500" />
-              <span>{bullet}</span>
-            </li>
-          ))}
-        </ul>
+    <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+      <div className="h-12 w-12 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-center">
+        {icon}
       </div>
+
+      <h3 className="mt-5 text-xl font-extrabold text-slate-900">
+        {title}
+      </h3>
+
+      <p className="mt-2 text-slate-600 leading-relaxed">
+        {desc}
+      </p>
     </div>
   );
 }
 
-function CapabilityCard({ item }) {
-  return (
-    <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6">
-      <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-900 text-white">
-        {item.icon}
+function SafeImage({ src, alt, className }) {
+  const [ok, setOk] = React.useState(true);
+
+  if (!ok) {
+    return (
+      <div className="h-full min-h-[160px] w-full bg-gradient-to-br from-slate-100 via-slate-50 to-emerald-50 flex items-center justify-center">
+        <span className="text-sm font-semibold text-slate-500">
+          Nanotel Infrastructure
+        </span>
       </div>
-      <h3 className="mt-5 text-xl font-extrabold text-slate-900">{item.title}</h3>
-      <p className="mt-2 text-sm leading-relaxed text-slate-600">{item.text}</p>
-    </div>
-  );
-}
+    );
+  }
 
-function IconTower() {
   return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="text-blue-700">
-      <path d="M12 2l3 20H9l3-20z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
-      <path d="M7 9a7 7 0 0110 0" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      <path d="M9 12a4 4 0 016 0" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-function IconWrench() {
-  return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="text-slate-800">
-      <path d="M21 7a6 6 0 01-8.2 5.6L7 18.4a2 2 0 01-2.8 0l-.6-.6a2 2 0 010-2.8l5.8-5.8A6 6 0 0117 3l-3 3 4 4 3-3z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
-function IconHandshake() {
-  return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-      <path d="M7 12l2 2a2 2 0 002.8 0l1.4-1.4a2 2 0 012.8 0L20 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      <path d="M2 12l5-5 4 4M22 12l-5-5-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-    </svg>
+    <img
+      src={src}
+      alt={alt}
+      className={className}
+      loading="lazy"
+      onError={() => setOk(false)}
+    />
   );
 }
 
 function IconShield() {
   return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="text-slate-900">
       <path d="M12 2l8 4v6c0 5-3.5 9.5-8 10-4.5-.5-8-5-8-10V6l8-4z" stroke="currentColor" strokeWidth="2" />
       <path d="M9 12l2 2 4-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
-function IconUsers() {
-  return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-      <path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      <circle cx="9" cy="7" r="4" stroke="currentColor" strokeWidth="2" />
-      <path d="M22 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-function IconBolt() {
-  return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="text-emerald-600">
-      <path d="M13 2L3 14h8l-1 8 11-14h-8V2z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
-function IconBrain() {
-  return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="text-blue-400">
-      <path d="M9 4a3 3 0 00-3 3v1a3 3 0 00-2 3v2a3 3 0 002 3v1a3 3 0 003 3h1M15 4a3 3 0 013 3v1a3 3 0 012 3v2a3 3 0 01-2 3v1a3 3 0 01-3 3h-1" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      <path d="M12 3v18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
     </svg>
   );
 }
@@ -535,35 +378,45 @@ function IconBrain() {
 function IconSatellite() {
   return (
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="text-slate-700">
-      <path d="M4 20l6-6M14 10l6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      <path d="M9 15a7 7 0 010-10M13 19a7 7 0 0010 0" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      <path d="M10 14l4 4M14 10l-4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <path d="M4 20l6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <path d="M14 10l6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <path d="M9 15a7 7 0 010-10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <path d="M13 19a7 7 0 0010 0" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <path d="M10 14l4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <path d="M14 10l-4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
     </svg>
   );
 }
 
-function IconCloud() {
+function IconBrain() {
   return (
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="text-blue-700">
-      <path d="M7 18a4 4 0 010-8 5 5 0 019.7-1.5A4 4 0 1117 18H7z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+      <path
+        d="M9 4a3 3 0 00-3 3v1a3 3 0 00-2 3v2a3 3 0 002 3v1a3 3 0 003 3h1m4-18a3 3 0 013 3v1a3 3 0 012 3v2a3 3 0 01-2 3v1a3 3 0 01-3 3h-1"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+      <path d="M12 3v18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
     </svg>
   );
 }
 
-function IconDataCenter() {
+function IconBolt() {
   return (
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="text-emerald-700">
-      <path d="M4 6h16v5H4V6zM4 13h16v5H4v-5z" stroke="currentColor" strokeWidth="2" />
-      <path d="M7 8h.01M10 8h.01M7 15h.01M10 15h.01" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+      <path d="M13 2L3 14h8l-1 8 11-14h-8V2z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
     </svg>
   );
 }
 
-function IconEquipment() {
+function IconUsers() {
   return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-      <rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" strokeWidth="2" />
-      <path d="M7 8h10M7 12h10M7 16h6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="text-blue-900">
+      <path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <path d="M9 11a4 4 0 100-8 4 4 0 000 8z" stroke="currentColor" strokeWidth="2" />
+      <path d="M22 21v-2a4 4 0 00-3-3.87" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <path d="M16 3.13a4 4 0 010 7.75" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
     </svg>
   );
 }
