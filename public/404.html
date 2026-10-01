@@ -1,14 +1,20 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Nanotel</title>
+    <meta name="robots" content="noindex" />
+    <title>Nanotel Africa</title>
     <script>
-      // Redirect all 404s to index.html while keeping path
-      var path = window.location.pathname;
-      var search = window.location.search || "";
-      var hash = window.location.hash || "";
-      window.location.replace("/" + "#" + path + search + hash);
+      (function () {
+        var route =
+          window.location.pathname +
+          window.location.search +
+          window.location.hash;
+
+        window.location.replace(
+          "/?p=" + encodeURIComponent(route)
+        );
+      })();
     </script>
   </head>
   <body></body>

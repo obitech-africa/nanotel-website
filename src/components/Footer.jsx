@@ -17,7 +17,7 @@ export default function Footer() {
         <div>
           <img
             src={`${import.meta.env.BASE_URL}logo.png`}
-            alt="Nanotel Logo"
+            alt="Nanotel Africa"
             className="h-16 w-auto object-contain"
           />
 
@@ -38,7 +38,7 @@ export default function Footer() {
           <div className="mt-3 grid gap-2">
             <NavLink to="/overview" className="text-white/80 hover:text-white hover:underline">Company Overview</NavLink>
             <NavLink to="/about" className="text-white/80 hover:text-white hover:underline">About Nanotel</NavLink>
-            <NavLink to="/services" className="text-white/80 hover:text-white hover:underline">Business Lines</NavLink>
+            <NavLink to="/services" className="text-white/80 hover:text-white hover:underline">Services</NavLink>
             <NavLink to="/contact" className="text-white/80 hover:text-white hover:underline">Contact</NavLink>
           </div>
         </div>
@@ -66,11 +66,11 @@ export default function Footer() {
           {/* SOCIAL MEDIA */}
           <div className="mt-6 flex gap-4 text-lg">
 
-            <a href={socials.twitter} target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400 transition">
+            <a href={socials.twitter} target="_blank" rel="noopener noreferrer" aria-label="Nanotel Africa on X" className="hover:text-emerald-400 transition">
               <FaXTwitter />
             </a>
 
-            <a href={socials.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400 transition">
+            <a href={socials.linkedin} target="_blank" rel="noopener noreferrer" aria-label="Nanotel Africa on LinkedIn" className="hover:text-emerald-400 transition">
               <FaLinkedin />
             </a>
 

@@ -291,7 +291,7 @@ export default function Home() {
                   <img
                     src={`${import.meta.env.BASE_URL}images/nanotel-engineer.png`}
                     alt="Nanotel Africa engineer representing telecommunications and digital infrastructure development in Africa"
-                    className="h-[460px] w-full object-cover object-center sm:h-[540px] lg:h-[580px]"
+                    className="h-[420px] w-full object-cover object-top sm:h-[540px] sm:object-center lg:h-[580px]"
                     loading="lazy"
                     onError={(event) => {
                       event.currentTarget.style.display = "none";

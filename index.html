@@ -11,6 +11,7 @@
       content="Nanotel Africa is a telecommunications and technology company focused on supporting connectivity, digital transformation and infrastructure development across Africa."
     />
     <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://nanotel.net/" />
 
     <link rel="icon" type="image/png" href="/logo.png" />
 
@@ -33,7 +34,7 @@
     <meta name="twitter:title" content="Nanotel Africa | ICT & Telecom Infrastructure" />
     <meta
       name="twitter:description"
-      content="Pan-African telecommunications infrastructure and ICT solutions provider."
+      content="Nanotel Africa is a telecommunications and technology company focused on supporting connectivity, digital transformation and infrastructure development across Africa."
     />
     <meta name="twitter:image" content="https://nanotel.net/logo.png" />
 
@@ -54,7 +55,7 @@
         const params = new URLSearchParams(window.location.search);
         const p = params.get("p");
         if (p) {
-          window.history.replaceState(null, "", decodeURIComponent(p));
+          window.history.replaceState(null, "", p);
         }
       })();
     </script>
