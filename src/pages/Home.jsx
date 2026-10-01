@@ -256,9 +256,7 @@ export default function Home() {
               </h2>
 
               <p className="mt-5 max-w-3xl text-lg leading-relaxed text-slate-700">
-                Nanotel Africa is a telecommunications and technology infrastructure
-                company supporting connectivity, ICT systems, energy solutions, and
-                digital infrastructure across African markets.
+                Nanotel Africa is a telecommunications and technology company focused on supporting connectivity, digital transformation and infrastructure development across Africa.
               </p>
 
               <p className="mt-4 max-w-3xl leading-relaxed text-slate-600">

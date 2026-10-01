@@ -26,8 +26,7 @@ export default function Footer() {
           </div>
 
           <p className="mt-2 text-sm text-white/70 leading-relaxed">
-           Nanotel Africa is a telecommunications and technology company focused on supporting connectivity, digital transformation and Infrastructure
-         development across Africa.
+           Nanotel Africa is a telecommunications and technology company focused on supporting connectivity, digital transformation and infrastructure development across Africa.
             
           </p>
         </div>
@@ -86,7 +85,7 @@ export default function Footer() {
           </span>
 
           <span>
-            Empowering the Future of Open Networks
+            Empowering the Future of Open Network Access
           </span>
         </div>
       </div>

@@ -103,9 +103,7 @@ export default function Overview() {
             </h1>
 
             <p className="mt-6 max-w-4xl text-lg leading-relaxed text-white/80 md:text-xl">
-              Nanotel Africa is a telecommunications and technology infrastructure
-              company focused on supporting connectivity, digital transformation,
-              and infrastructure development across African markets.
+              Nanotel Africa is a telecommunications and technology company focused on supporting connectivity, digital transformation and infrastructure development across Africa.
             </p>
 
             <div className="mt-9 flex flex-wrap gap-3">
@@ -136,13 +134,11 @@ export default function Overview() {
             </div>
 
             <h2 className="mt-3 max-w-4xl text-3xl font-extrabold tracking-tight text-slate-950 md:text-4xl">
-              Nanotel Africa is a telecommunications and technology infrastructure company.
+              Nanotel Africa is a telecommunications and technology company.
             </h2>
 
             <p className="mt-6 max-w-4xl text-lg leading-relaxed text-slate-700">
-              Nanotel Africa is a telecommunications and technology infrastructure
-              company focused on supporting connectivity, digital transformation,
-              and infrastructure development across African markets.
+              Nanotel Africa is a telecommunications and technology company focused on supporting connectivity, digital transformation and infrastructure development across Africa.
             </p>
 
             <p className="mt-4 max-w-4xl leading-relaxed text-slate-600">
