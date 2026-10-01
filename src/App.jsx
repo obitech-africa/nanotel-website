@@ -62,7 +62,7 @@ function TopBar() {
     <div className="bg-emerald-700 text-white">
       <div className="max-w-6xl mx-auto px-4 py-2 text-sm flex items-center justify-between">
         <span className="font-semibold">
-          Empowering the Future of Open Networks
+          Empowering the Future of Open Network Access
         </span>
 
         <div className="flex gap-4 opacity-95">
@@ -76,21 +76,12 @@ function TopBar() {
           </a>
 
           <a
-            href={socials.facebook}
+            href={socials.twitter}
             target="_blank"
             rel="noopener noreferrer"
             className="hover:underline"
           >
-            Facebook
-          </a>
-
-          <a
-            href={socials.youtube}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:underline"
-          >
-            YouTube
+            X
           </a>
         </div>
       </div>

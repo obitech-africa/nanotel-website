@@ -245,37 +245,61 @@ export default function Home() {
       {/* CORPORATE INTRODUCTION */}
       <section className="border-b border-slate-200 bg-white">
         <div className="mx-auto max-w-6xl px-4 py-14 md:py-16">
-          <div className="grid gap-8 lg:grid-cols-[1.35fr_0.65fr] lg:items-end">
+          <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
             <div>
               <div className="text-sm font-bold uppercase tracking-[0.16em] text-blue-700">
                 Nanotel Africa
               </div>
 
-              <h2 className="mt-3 max-w-4xl text-3xl font-extrabold tracking-tight text-slate-950 md:text-4xl">
-                Telecommunications and technology infrastructure supporting Africa&apos;s digital transformation.
+              <h2 className="mt-3 max-w-3xl text-3xl font-extrabold tracking-tight text-slate-950 md:text-4xl">
+                Empowering the Future of Open Network Access
               </h2>
 
-              <p className="mt-5 max-w-4xl text-lg leading-relaxed text-slate-700">
+              <p className="mt-5 max-w-3xl text-lg leading-relaxed text-slate-700">
                 Nanotel Africa is a telecommunications and technology infrastructure
-                company focused on supporting connectivity, digital transformation,
-                and infrastructure development across African markets.
+                company supporting connectivity, ICT systems, energy solutions, and
+                digital infrastructure across African markets.
               </p>
+
+              <p className="mt-4 max-w-3xl leading-relaxed text-slate-600">
+                We combine practical engineering, dependable project delivery, and
+                long-term partnerships to help organizations build, operate, and
+                strengthen the infrastructure that powers Africa&apos;s digital future.
+              </p>
+
+              <div className="mt-7 flex flex-wrap gap-3">
+                <NavLink
+                  to="/about"
+                  className="rounded-xl bg-slate-950 px-6 py-3 font-extrabold text-white transition hover:bg-slate-800"
+                >
+                  About Nanotel
+                </NavLink>
+
+                <NavLink
+                  to="/services"
+                  className="rounded-xl border border-slate-300 bg-white px-6 py-3 font-bold text-slate-900 transition hover:bg-slate-100"
+                >
+                  Explore Our Services
+                </NavLink>
+              </div>
             </div>
 
-            <div className="flex flex-wrap gap-3 lg:justify-end">
-              <NavLink
-                to="/about"
-                className="rounded-xl bg-slate-950 px-6 py-3 font-extrabold text-white transition hover:bg-slate-800"
-              >
-                About Nanotel
-              </NavLink>
+            <div className="lg:justify-self-end">
+              <div className="overflow-hidden rounded-3xl border border-slate-200 bg-slate-100 shadow-xl">
+                <img
+                  src={`${import.meta.env.BASE_URL}images/nanotel-engineer.webp`}
+                  alt="Nanotel Africa engineer representing telecommunications and digital infrastructure development in Africa"
+                  className="h-[440px] w-full object-cover object-center sm:h-[520px] lg:h-[560px]"
+                  loading="lazy"
+                  onError={(event) => {
+                    event.currentTarget.style.display = "none";
+                  }}
+                />
+              </div>
 
-              <NavLink
-                to="/overview"
-                className="rounded-xl border border-slate-300 bg-white px-6 py-3 font-bold text-slate-900 transition hover:bg-slate-100"
-              >
-                Company Overview
-              </NavLink>
+              <p className="mt-3 text-sm font-semibold text-slate-500">
+                Engineering reliable infrastructure for a more connected Africa.
+              </p>
             </div>
           </div>
         </div>
