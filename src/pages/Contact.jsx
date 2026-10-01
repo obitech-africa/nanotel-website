@@ -1,8 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { addDoc, collection, serverTimestamp } from "firebase/firestore";
-import { db } from "../lib/firebase";
-import emailjs from "@emailjs/browser";
 
 const DEPARTMENT_EMAILS = {
   info: "info@nanotel.net",
@@ -166,6 +163,18 @@ export default function Contact() {
     const departmentLabel = DEPARTMENT_LABELS[values.department];
 
     try {
+      const [
+        { addDoc, collection, serverTimestamp },
+        { db },
+        emailjsModule,
+      ] = await Promise.all([
+        import("firebase/firestore"),
+        import("../lib/firestore"),
+        import("@emailjs/browser"),
+      ]);
+
+      const emailjs = emailjsModule.default;
+
       await addDoc(collection(db, "contactMessages"), {
         fullName: values.fullName.trim(),
         organization: values.organization.trim(),

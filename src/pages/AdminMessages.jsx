@@ -5,7 +5,7 @@ import {
   orderBy,
   query,
 } from "firebase/firestore";
-import { db } from "../lib/firebase";
+import { db } from "../lib/firestore";
 
 export default function AdminMessages() {
   const [activeTab, setActiveTab] = useState("contact");

@@ -161,6 +161,8 @@ export default function Home() {
               alt={item.title}
               className="absolute inset-0 h-full w-full scale-105 object-cover"
               loading={index === 0 ? "eager" : "lazy"}
+              fetchPriority={index === 0 ? "high" : "auto"}
+              decoding="async"
               onError={(event) => {
                 event.currentTarget.style.display = "none";
               }}
