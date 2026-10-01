@@ -111,7 +111,7 @@ export default function Overview() {
                 to="/services"
                 className="rounded-xl bg-white px-6 py-3 font-extrabold text-slate-950 transition hover:bg-white/90"
               >
-                Explore Business Lines
+                Explore Services
               </NavLink>
 
               <NavLink
@@ -134,7 +134,7 @@ export default function Overview() {
             </div>
 
             <h2 className="mt-3 max-w-4xl text-3xl font-extrabold tracking-tight text-slate-950 md:text-4xl">
-              Nanotel Africa is a telecommunications and technology company.
+              Infrastructure capability built around practical delivery.
             </h2>
 
             <p className="mt-6 max-w-4xl text-lg leading-relaxed text-slate-700">
@@ -142,9 +142,9 @@ export default function Overview() {
             </p>
 
             <p className="mt-4 max-w-4xl leading-relaxed text-slate-600">
-              Our approach combines engineering discipline, local understanding,
-              reliable execution, and responsible partnerships to support practical
-              infrastructure solutions for real operating environments.
+              Our delivery approach connects technical planning, field execution,
+              infrastructure integration, documentation, maintenance support, and
+              partner coordination around the requirements of each project.
             </p>
           </article>
 
@@ -193,7 +193,7 @@ export default function Overview() {
               </div>
 
               <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-slate-950 md:text-4xl">
-                Business lines supporting infrastructure delivery and operations.
+                Capabilities supporting infrastructure delivery and operations.
               </h2>
             </div>
 

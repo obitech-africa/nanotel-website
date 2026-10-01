@@ -1,9 +1,9 @@
-﻿import fs from "node:fs/promises";
+import fs from "node:fs/promises";
 import path from "node:path";
 
 const DIST = path.resolve("dist");
 const SITE_URL = "https://nanotel.net";
-const IMAGE = `${SITE_URL}/logo.png`;
+const IMAGE = `${SITE_URL}/nanotel-social-card.png`;
 
 const routes = [
   {
@@ -143,6 +143,15 @@ function renderRoute(route) {
   );
   html = setMeta(html, "property", "og:url", url);
   html = setMeta(html, "property", "og:image", IMAGE);
+  html = setMeta(html, "property", "og:image:width", "1200");
+  html = setMeta(html, "property", "og:image:height", "630");
+  html = setMeta(html, "property", "og:image:type", "image/png");
+  html = setMeta(
+    html,
+    "property",
+    "og:image:alt",
+    "Nanotel Africa | Empowering the Future of Open Network Access"
+  );
   html = setMeta(html, "property", "og:type", "website");
 
   html = setMeta(
@@ -159,6 +168,12 @@ function renderRoute(route) {
     route.description
   );
   html = setMeta(html, "name", "twitter:image", IMAGE);
+  html = setMeta(
+    html,
+    "name",
+    "twitter:image:alt",
+    "Nanotel Africa | Empowering the Future of Open Network Access"
+  );
 
   html = setCanonical(html, url);
 
