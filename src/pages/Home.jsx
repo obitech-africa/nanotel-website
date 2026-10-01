@@ -284,22 +284,45 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="lg:justify-self-end">
-              <div className="overflow-hidden rounded-3xl border border-slate-200 bg-slate-100 shadow-xl">
-                <img
-                  src={`${import.meta.env.BASE_URL}images/nanotel-engineer.webp`}
-                  alt="Nanotel Africa engineer representing telecommunications and digital infrastructure development in Africa"
-                  className="h-[440px] w-full object-cover object-center sm:h-[520px] lg:h-[560px]"
-                  loading="lazy"
-                  onError={(event) => {
-                    event.currentTarget.style.display = "none";
-                  }}
-                />
+            <div className="relative lg:justify-self-end">
+              <div className="absolute -right-5 -top-5 h-28 w-28 rounded-full bg-emerald-400/20 blur-2xl" />
+              <div className="absolute -bottom-6 -left-6 h-36 w-36 rounded-full bg-blue-500/20 blur-2xl" />
+
+              <div className="relative overflow-hidden rounded-[2rem] border border-slate-200 bg-gradient-to-br from-slate-950 via-blue-950 to-emerald-900 p-3 shadow-2xl">
+                <div className="relative overflow-hidden rounded-[1.55rem] bg-slate-100">
+                  <img
+                    src={`${import.meta.env.BASE_URL}images/nanotel-engineer.webp`}
+                    alt="Nanotel Africa engineer representing telecommunications and digital infrastructure development in Africa"
+                    className="h-[460px] w-full object-cover object-center sm:h-[540px] lg:h-[580px]"
+                    loading="lazy"
+                    onError={(event) => {
+                      event.currentTarget.style.display = "none";
+                    }}
+                  />
+
+                  <div className="pointer-events-none absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
+
+                  <div className="absolute left-5 top-5 rounded-full border border-white/20 bg-slate-950/65 px-4 py-2 text-xs font-extrabold uppercase tracking-[0.14em] text-white backdrop-blur-md">
+                    Nanotel Africa
+                  </div>
+
+                  <div className="absolute bottom-5 left-5 right-5">
+                    <div className="max-w-md rounded-2xl border border-white/15 bg-white/10 px-5 py-4 text-white shadow-lg backdrop-blur-md">
+                      <div className="text-sm font-extrabold uppercase tracking-[0.12em] text-emerald-300">
+                        Built for Africa
+                      </div>
+                      <div className="mt-1 text-base font-bold leading-snug">
+                        Engineering reliable infrastructure for a more connected Africa.
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
-              <p className="mt-3 text-sm font-semibold text-slate-500">
-                Engineering reliable infrastructure for a more connected Africa.
-              </p>
+              <div className="mt-4 flex items-center gap-3 text-sm font-semibold text-slate-500">
+                <span className="h-1.5 w-10 rounded-full bg-emerald-500" />
+                Practical engineering • Reliable delivery • Long-term partnerships
+              </div>
             </div>
           </div>
         </div>
