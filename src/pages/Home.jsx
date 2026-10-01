@@ -354,19 +354,19 @@ export default function Home() {
             </div>
 
             <h2 className="mt-3 text-3xl font-extrabold md:text-4xl">
-              Infrastructure Support Across African Markets
+              Building the infrastructure foundations for a more connected Africa
             </h2>
 
             <p className="mt-5 leading-relaxed text-white/80">
-              Nanotel Africa is focused on supporting reliable telecommunications
-              and digital infrastructure through practical engineering, responsible
-              partnerships, and strong technical execution.
+              Nanotel Africa&apos;s long-term vision is to support stronger
+              telecommunications, digital infrastructure, local technical capability,
+              and technology ecosystems across Africa.
             </p>
 
             <p className="mt-4 leading-relaxed text-white/80">
-              Our work supports organizations that need dependable connectivity,
-              energy systems, ICT infrastructure, and operational support in
-              diverse environments.
+              Our ambition is to grow through practical partnerships,
+              infrastructure delivery, local capability development, and,
+              over time, deeper African participation in technology development.
             </p>
 
             <div className="mt-8 grid grid-cols-2 gap-4">
@@ -376,24 +376,17 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative overflow-hidden rounded-3xl border border-white/10 shadow-2xl">
+          <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-slate-950 shadow-2xl">
             <img
-              src={`${import.meta.env.BASE_URL}images/hero/africa-infrastructure.jpg`}
-              className="h-[430px] w-full object-cover"
-              alt="African infrastructure"
+              src={`${import.meta.env.BASE_URL}images/pan-african-vision.png`}
+              className="h-[360px] w-full object-contain p-3 sm:h-[400px] md:h-[430px] md:p-4"
+              alt="Illustration of a connected Africa representing Nanotel Africa's Pan-African infrastructure vision"
               loading="lazy"
+              decoding="async"
               onError={(event) => {
                 event.currentTarget.style.display = "none";
               }}
             />
-
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/65 via-transparent to-transparent" />
-
-            <div className="absolute bottom-5 left-5 rounded-xl border border-white/15 bg-slate-950/65 px-5 py-3 backdrop-blur-md">
-              <div className="font-extrabold text-white">
-                Reliable infrastructure for digital growth
-              </div>
-            </div>
           </div>
         </div>
       </section>
