@@ -110,13 +110,13 @@ export default function About() {
             </div>
 
             <h1 className="mt-5 text-4xl font-extrabold tracking-tight md:text-6xl">
-              Building Reliable Telecom & Digital Infrastructure
+              Building Infrastructure for Africa&apos;s Digital Future
             </h1>
 
             <p className="mt-6 max-w-3xl text-lg leading-relaxed text-white/80 md:text-xl">
-              Nanotel Africa provides telecommunications infrastructure, ICT support,
-              energy systems, and digital infrastructure services for operators,
-              enterprises, institutions, and communities across Africa.
+              We are building an African telecommunications and technology company
+              focused on dependable infrastructure, local technical capability,
+              responsible partnerships, and long-term digital growth.
             </p>
 
             <div className="mt-9 flex flex-wrap gap-3">
@@ -147,7 +147,7 @@ export default function About() {
             </div>
 
             <h2 className="mt-3 max-w-4xl text-3xl font-extrabold tracking-tight text-slate-950 md:text-4xl">
-              Telecommunications and technology infrastructure supporting Africa&apos;s digital transformation.
+              An African technology company focused on connectivity and infrastructure.
             </h2>
 
             <p className="mt-6 max-w-4xl text-lg leading-relaxed text-slate-700">
@@ -155,9 +155,10 @@ export default function About() {
             </p>
 
             <p className="mt-4 max-w-4xl leading-relaxed text-slate-600">
-              Our approach combines engineering discipline, local understanding,
-              reliable execution, and responsible partnerships to support practical
-              infrastructure solutions for real operating environments.
+              Our direction is shaped by the need for dependable infrastructure,
+              stronger local technical capability, practical innovation, and
+              partnerships that can support sustainable technology development
+              across African markets.
             </p>
           </article>
         </section>

@@ -1,19 +1,20 @@
-﻿// src/App.jsx
 // src/App.jsx
-import React from "react";
+// src/App.jsx
+import React, { Suspense, lazy } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import Home from "./pages/Home.jsx";
-import About from "./pages/About.jsx";
-import Services from "./pages/Services.jsx";
-import HumanCapital from "./pages/HumanCapital.jsx";
-import Ethics from "./pages/Ethics.jsx";
-import Contact from "./pages/Contact.jsx";
-import Overview from "./pages/Overview.jsx";
-import NotFound from "./pages/NotFound.jsx";
-import AdminLogin from "./pages/AdminLogin.jsx";
-import ProtectedRoute from "./components/ProtectedRoute.jsx";
-import AdminMessages from "./pages/AdminMessages.jsx";
+
+const Overview = lazy(() => import("./pages/Overview.jsx"));
+const About = lazy(() => import("./pages/About.jsx"));
+const Services = lazy(() => import("./pages/Services.jsx"));
+const HumanCapital = lazy(() => import("./pages/HumanCapital.jsx"));
+const Ethics = lazy(() => import("./pages/Ethics.jsx"));
+const Contact = lazy(() => import("./pages/Contact.jsx"));
+const NotFound = lazy(() => import("./pages/NotFound.jsx"));
+const AdminLogin = lazy(() => import("./pages/AdminLogin.jsx"));
+const AdminMessages = lazy(() => import("./pages/AdminMessages.jsx"));
+const ProtectedRoute = lazy(() => import("./components/ProtectedRoute.jsx"));
 
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
@@ -29,7 +30,8 @@ export default function App() {
         <Navbar />
 
         <main className="flex-1">
-          <Routes>
+          <Suspense fallback={<RouteLoading />}>
+            <Routes>
             <Route
               path="/"
               element={
@@ -183,12 +185,26 @@ export default function App() {
                 </>
               }
             />
-          </Routes>
+            </Routes>
+          </Suspense>
         </main>
 
         <Footer />
       </div>
     </BrowserRouter>
+  );
+}
+
+function RouteLoading() {
+  return (
+    <div className="mx-auto flex min-h-[40vh] max-w-6xl items-center justify-center px-4 py-16">
+      <div className="text-center">
+        <div className="mx-auto h-8 w-8 animate-spin rounded-full border-4 border-slate-200 border-t-blue-700" />
+        <p className="mt-4 text-sm font-semibold text-slate-600">
+          Loading page...
+        </p>
+      </div>
+    </div>
   );
 }
 

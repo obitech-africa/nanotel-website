@@ -161,6 +161,8 @@ export default function Home() {
               alt={item.title}
               className="absolute inset-0 h-full w-full scale-105 object-cover"
               loading={index === 0 ? "eager" : "lazy"}
+              fetchPriority={index === 0 ? "high" : "auto"}
+              decoding="async"
               onError={(event) => {
                 event.currentTarget.style.display = "none";
               }}
@@ -260,9 +262,9 @@ export default function Home() {
               </p>
 
               <p className="mt-4 max-w-3xl leading-relaxed text-slate-600">
-                We combine practical engineering, dependable project delivery, and
-                long-term partnerships to help organizations build, operate, and
-                strengthen the infrastructure that powers Africa&apos;s digital future.
+                We support operators, enterprises, institutions, and infrastructure
+                partners with practical engineering, technical delivery, and long-term
+                support for connectivity and digital infrastructure projects.
               </p>
 
               <div className="mt-7 flex flex-wrap gap-3">

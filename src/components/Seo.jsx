@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 const SITE_NAME = "Nanotel Africa";
 const SITE_URL = "https://nanotel.net";
-const DEFAULT_IMAGE = `${SITE_URL}/logo.png`;
+const DEFAULT_IMAGE = `${SITE_URL}/nanotel-social-card.png`;
 
 function setMeta(selector, attribute, value) {
   let element = document.head.querySelector(selector);
@@ -80,6 +80,30 @@ export default function Seo({
     );
 
     setMeta(
+      'meta[property="og:image:width"]',
+      "content",
+      "1200"
+    );
+
+    setMeta(
+      'meta[property="og:image:height"]',
+      "content",
+      "630"
+    );
+
+    setMeta(
+      'meta[property="og:image:type"]',
+      "content",
+      "image/png"
+    );
+
+    setMeta(
+      'meta[property="og:image:alt"]',
+      "content",
+      "Nanotel Africa | Empowering the Future of Open Network Access"
+    );
+
+    setMeta(
       'meta[property="og:type"]',
       "content",
       "website"
@@ -107,6 +131,12 @@ export default function Seo({
       'meta[name="twitter:image"]',
       "content",
       image
+    );
+
+    setMeta(
+      'meta[name="twitter:image:alt"]',
+      "content",
+      "Nanotel Africa | Empowering the Future of Open Network Access"
     );
 
     let canonical = document.head.querySelector('link[rel="canonical"]');

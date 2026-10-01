@@ -154,9 +154,9 @@ export default function Services() {
           </h1>
 
           <p className="mt-5 max-w-3xl text-white/80 text-lg leading-relaxed">
-            Nanotel Africa combines telecommunications, power, ICT, data centre,
-            equipment, and field-operations capability to support infrastructure
-            projects from planning through deployment and long-term operations.
+            Nanotel Africa supports telecommunications, power, ICT, data centre,
+            equipment, and field-operations requirements across infrastructure
+            planning, deployment, integration, maintenance, and technical support.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -187,8 +187,9 @@ export default function Services() {
               Infrastructure capabilities
             </h2>
             <p className="mt-3 text-slate-600 leading-relaxed">
-              Each business line combines practical engineering, field execution,
-              technical documentation, quality control, and long-term support.
+              Our service areas are structured around practical engineering,
+              field execution, technical documentation, quality control, integration,
+              and ongoing operational support.
             </p>
           </div>
 
@@ -226,11 +227,12 @@ export default function Services() {
               Project Delivery
             </div>
             <h2 className="mt-3 text-3xl font-extrabold">
-              Let’s scope the right infrastructure solution.
+              Let&apos;s discuss your infrastructure requirements.
             </h2>
             <p className="mt-4 text-white/75 leading-relaxed">
-              We support operators, TowerCos, enterprises, governments, institutions,
-              OEMs, investors, and development partners across the infrastructure lifecycle.
+              We engage with operators, tower companies, enterprises, institutions,
+              OEMs, public-sector organizations, and development partners on
+              telecommunications and digital infrastructure requirements.
             </p>
           </div>
 
