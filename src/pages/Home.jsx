@@ -289,7 +289,7 @@ export default function Home() {
               <div className="relative overflow-hidden rounded-[2rem] border border-slate-200 bg-gradient-to-br from-slate-950 via-blue-950 to-emerald-900 p-3 shadow-2xl">
                 <div className="relative overflow-hidden rounded-[1.55rem] bg-slate-100">
                   <img
-                    src={`${import.meta.env.BASE_URL}images/nanotel-engineer.webp`}
+                    src={`${import.meta.env.BASE_URL}images/nanotel-engineer.png`}
                     alt="Nanotel Africa engineer representing telecommunications and digital infrastructure development in Africa"
                     className="h-[460px] w-full object-cover object-center sm:h-[540px] lg:h-[580px]"
                     loading="lazy"
