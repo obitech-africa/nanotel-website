@@ -146,11 +146,11 @@ export default function Services() {
         <div className="relative max-w-6xl mx-auto px-4 py-16 text-white">
           <div className="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/10 px-4 py-2 text-white/80 text-sm">
             <span className="h-2 w-2 rounded-full bg-emerald-400" />
-            Business Lines • Delivery • Infrastructure • Innovation
+            Services • Delivery • Infrastructure • Innovation
           </div>
 
           <h1 className="mt-5 text-4xl md:text-5xl font-extrabold tracking-tight">
-            Business Lines
+            Services
           </h1>
 
           <p className="mt-5 max-w-3xl text-white/80 text-lg leading-relaxed">

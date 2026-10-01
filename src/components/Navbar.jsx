@@ -10,7 +10,7 @@ export default function Navbar() {
       { to: "/", label: "Home", end: true },
       { to: "/overview", label: "Overview" },
       { to: "/about", label: "About" },
-      { to: "/services", label: "Business Lines" },
+      { to: "/services", label: "Services" },
       { to: "/human-capital", label: "Human Capital" },
       { to: "/ethics", label: "Ethics" },
     ],
@@ -28,7 +28,7 @@ export default function Navbar() {
         <NavLink to="/" className="flex items-center gap-3">
   <img
     src={`${import.meta.env.BASE_URL}logo.png`}
-    alt="Nanotel Logo"
+    alt="Nanotel Africa"
   className="h-16 w-auto object-contain scale-110" draggable={false} />
 
   <div className="leading-tight">
@@ -36,7 +36,7 @@ export default function Navbar() {
       NANOTEL
     </div>
     <div className="text-xs text-white/80">
-      Open Networks • Pan-African
+      Connectivity • Technology • Infrastructure
     </div>
   </div>
 </NavLink>
@@ -70,6 +70,8 @@ export default function Navbar() {
             className="lg:hidden inline-flex items-center justify-center h-16 w-10 rounded-xl bg-white/10 border border-white/20 hover:bg-white/15 transition"
             onClick={() => setOpen((v) => !v)}
             aria-label="Toggle menu"
+            aria-expanded={open}
+            aria-controls="mobile-navigation"
           >
             <span className="text-xl leading-none">{open ? "✕" : "☰"}</span>
           </button>
@@ -78,7 +80,7 @@ export default function Navbar() {
 
       {/* Mobile menu panel */}
       {open && (
-        <div className="lg:hidden border-t border-white/10 bg-slate-950/40 backdrop-blur">
+        <div id="mobile-navigation" className="lg:hidden border-t border-white/10 bg-slate-950/40 backdrop-blur">
           <div className="max-w-6xl mx-auto px-4 py-3 grid gap-2">
             {links.map((l) => (
               <NavLink
